@@ -1,0 +1,17 @@
+{
+    "framework": null,
+    "buildCommand": "composer install --optimize-autoloader --no-dev",
+    "outputDirectory": "public",
+    "installCommand": "composer install --ignore-platform-reqs",
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://silvaaulia.vercel.app"
+    }
+}
