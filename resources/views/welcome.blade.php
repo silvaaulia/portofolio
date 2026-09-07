@@ -2470,6 +2470,17 @@
         }
 
 
+        /* Desktop: Show only hamburger */
+        @media (min-width: 701px) {
+            .nav-menu {
+                display: none !important;
+            }
+            .mobile-toggle {
+                display: flex !important;
+            }
+        }
+
+
         @media (max-width: 700px) {
 
             .container {
@@ -2743,12 +2754,11 @@
                     Contact
                 </a>
 
+                <a href="{{ asset('images/Silva_Aulia Nursamsiah_CV terbaru.pdf') }}" download="CV_Silva_Aulia_Nursamsiah.pdf">
+                    Download CV
+                </a>
 
             </nav>
-
-            <a href="{{ asset('images/Silva_Aulia Nursamsiah_CV terbaru.pdf') }}" download="CV_Silva_Aulia_Nursamsiah.pdf" class="nav-download">
-                Download CV
-            </a>
 
 
             <button
@@ -3443,8 +3453,85 @@
                 </article>
 
 
+                <!-- PROJECT 05 -->
 
-                <!-- PROJECT 05
+                <article class="project reverse reveal">
+
+                    <div class="project-image project-purple">
+
+                        <img src="{{ asset('images/devtools-preview.png') }}" alt="DevTools" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,.4);">
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            05 / 06
+                        </span>
+
+                        <span class="project-category">
+                            WEB APPLICATION · LARAVEL
+                        </span>
+
+
+                        <h3>
+                            DevTools
+                        </h3>
+
+
+                        <p>
+
+                            Aplikasi web DevTools untuk developers yang dirancang untuk membantu coding, testing, dan debugging dengan fitur-fitur productivity tools yang lengkap.
+
+                        </p>
+
+
+                        <div class="project-details">
+
+                            <div>
+
+                                <span>
+                                    ROLE
+                                </span>
+
+                                <strong>
+                                    Full Stack Developer
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    TECHNOLOGY
+                                </span>
+
+                                <strong>
+                                    Laravel · MySQL · Vue.js
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="https://devtools-production-a3a9.up.railway.app/"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            View Project
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 06
 
                 <article class="project reveal">
 
