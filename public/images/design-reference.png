@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>AccessDenied</Code>
+  <Message>Request has expired.</Message>
+  <RequestId>6A9EF394CD08703934EC8044</RequestId>
+  <HostId>minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com</HostId>
+  <Expires>2026-08-19T04:16:07.000Z</Expires>
+  <ServerTime>2026-09-07T17:25:40.000Z</ServerTime>
+  <EC>0002-00000069</EC>
+  <RecommendDoc>https://api.alibabacloud.com/troubleshoot?q=0002-00000069</RecommendDoc>
+</Error>
