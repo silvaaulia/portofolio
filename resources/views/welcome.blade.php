@@ -3125,15 +3125,7 @@
 
                 <div class="hero-subtitle">
 
-                    <span class="typing-text">
-                        Front-end Development · UI/UX Design · Web Design
-                    </span>
-
                 </div>
-
-                    <span class="line-two">
-                        & UI/UX Designer
-                    </span>
 
                 </h1>
 
@@ -3154,6 +3146,11 @@
 
                     <span>
                         Web Design
+                    </span>
+                    <i>•</i>
+
+                    <span>
+                        Fullstack Dev
                     </span>
 
                 </div>
