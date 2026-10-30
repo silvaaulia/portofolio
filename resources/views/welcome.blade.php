@@ -4303,12 +4303,126 @@
                 transition: none;
             }
         }
+```css
+/* Navbar default */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition:
+        background-color 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
 
+/* Overlay ketika halaman di-scroll */
+#navbar.scrolled {
+    background: rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Jika navbar menggunakan tema gelap, gunakan alternatif ini */
+/*
+#navbar.scrolled {
+    background: rgba(15, 23, 42, 0.78);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+*/
+```
+```css
+/* Scroll Progress Bar */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #16a34a;
+    z-index: 2000;
+    transition: width 0.08s linear;
+}
+
+/* Active Navigation */
+#navMenu a {
+    transition: color 0.25s ease;
+}
+
+#navMenu a.active {
+    color: #16a34a;
+}
+
+/* Back to Top */
+#backToTop {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #166534;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: #16a34a;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Project Card Hover */
+.project-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
     </style>
 </head>
 
 
 <body>
+    <!-- Scroll Progress Bar -->
+<div id="scrollProgress" aria-hidden="true"></div>
 
     <!-- =========================================================
          BACKGROUND EFFECTS
@@ -6497,120 +6611,192 @@
          JAVASCRIPT
     ========================================================== -->
 
-    <script>
+    ```html
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+    /* ================================================
+       NAVBAR SCROLL + OVERLAY
+    ================================================ */
 
-                /* ================================================
-                   NAVBAR SCROLL
-                ================================================= */
+    const navbar = document.getElementById("navbar");
 
-                const navbar =
-                    document.getElementById("navbar");
+    function updateNavbar() {
+        if (!navbar) return;
 
-                function updateNavbar() {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    }
 
-                    if (window.scrollY > 50) {
+    window.addEventListener("scroll", updateNavbar, { passive: true });
+    updateNavbar();
 
-                        navbar.classList.add("scrolled");
 
-                    } else {
+    /* ================================================
+       SCROLL REVEAL
+    ================================================ */
 
-                        navbar.classList.remove("scrolled");
+    const revealElements = document.querySelectorAll(".reveal");
 
-                    }
-
+    const revealObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    revealObserver.unobserve(entry.target);
                 }
+            });
+        },
+        {
+            threshold: 0.12
+        }
+    );
 
-                window.addEventListener(
-                    "scroll",
-                    updateNavbar
-                );
-
-                updateNavbar();
-
-
-                /* ================================================
-                   SCROLL REVEAL
-                ================================================= */
-
-                const revealElements =
-                    document.querySelectorAll(".reveal");
+    revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+    });
 
 
-                const revealObserver =
-                    new IntersectionObserver(
-                        function (entries) {
+    /* ================================================
+       MOBILE MENU
+    ================================================ */
 
-                            entries.forEach(
-                                function (entry) {
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
 
-                                    if (
-                                        entry.isIntersecting
-                                    ) {
+    if (mobileToggle && navMenu) {
 
-                                        entry.target.classList.add(
-                                            "active"
-                                        );
+        function closeMobileMenu() {
+            navMenu.classList.remove("mobile-open");
+            mobileToggle.setAttribute("aria-expanded", "false");
+        }
 
-                                        revealObserver.unobserve(
-                                            entry.target
-                                        );
+        mobileToggle.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("mobile-open");
+            mobileToggle.setAttribute("aria-expanded", String(isOpen));
+        });
 
-                                    }
+        navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeMobileMenu);
+        });
 
-                                }
-                            );
-
-                        },
-                        {
-                            threshold: 0.12
-                        }
-                    );
-
-
-                revealElements.forEach(
-                    function (element) {
-
-                        revealObserver.observe(element);
-
-                    }
-                );
-
-
-                /* ================================================
-                   MOBILE MENU
-                ================================================= */
-
-                const mobileToggle = document.getElementById("mobileToggle");
-                const navMenu = document.getElementById("navMenu");
-
-                function closeMobileMenu() {
-                    navMenu.classList.remove("mobile-open");
-                    mobileToggle.setAttribute("aria-expanded", "false");
-                }
-
-                mobileToggle.addEventListener("click", function () {
-                    const isOpen = navMenu.classList.toggle("mobile-open");
-                    mobileToggle.setAttribute("aria-expanded", String(isOpen));
-                });
-
-                navMenu.querySelectorAll("a").forEach(function (link) {
-                    link.addEventListener("click", closeMobileMenu);
-                });
-
-                window.addEventListener("resize", function () {
-                    if (window.innerWidth > 700) {
-                        closeMobileMenu();
-                    }
-                });
-
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 700) {
+                closeMobileMenu();
             }
-        );
+        });
+    }
 
-    </script>
+});
+```javascript
+/* ================================================
+   SCROLL PROGRESS BAR
+================================================ */
 
+const progressBar = document.getElementById("scrollProgress");
+
+function updateScrollProgress() {
+    if (!progressBar) return;
+
+    const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress = scrollableHeight > 0
+        ? (window.scrollY / scrollableHeight) * 100
+        : 0;
+
+    progressBar.style.width = progress + "%";
+}
+
+window.addEventListener("scroll", updateScrollProgress, {
+    passive: true
+});
+
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
+
+
+/* ================================================
+   BACK TO TOP
+================================================ */
+
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+    function updateBackToTop() {
+        backToTop.classList.toggle("visible", window.scrollY > 400);
+    }
+
+    window.addEventListener("scroll", updateBackToTop, {
+        passive: true
+    });
+
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    updateBackToTop();
+}
+
+
+/* ================================================
+   ACTIVE NAVIGATION
+================================================ */
+
+const sections = document.querySelectorAll(
+    "main section[id], section[id]"
+);
+
+const navLinks = document.querySelectorAll(
+    '#navMenu a[href^="#"]'
+);
+
+const sectionObserver = new IntersectionObserver(
+    function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+
+            navLinks.forEach(function (link) {
+                const isActive =
+                    link.getAttribute("href") ===
+                    "#" + entry.target.id;
+
+                link.classList.toggle("active", isActive);
+
+                if (isActive) {
+                    link.setAttribute("aria-current", "location");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
+        });
+    },
+    {
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0
+    }
+);
+
+sections.forEach(function (section) {
+    sectionObserver.observe(section);
+});
+```
+</script>
+```
+<!-- Back to Top -->
+<button
+    id="backToTop"
+    type="button"
+    aria-label="Kembali ke atas"
+    title="Kembali ke atas"
+>
+    ↑
+</button>
 </body>
 </html>
