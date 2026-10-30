@@ -2438,6 +2438,408 @@
             line-height: 1.85;
         }
 
+        .edu-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 22px;
+
+            padding: 10px 18px;
+
+            border: 1px solid rgba(0, 255, 136, .25);
+
+            border-radius: 50px;
+
+            background: rgba(0, 255, 136, .05);
+
+            color: var(--primary);
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+        }
+
+        .edu-badge span {
+            color: var(--muted);
+        }
+
+
+        /* =========================================================
+           HERO META — CONTACT STRIP
+        ========================================================= */
+
+        .hero-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 12px 28px;
+
+            margin-top: 32px;
+        }
+
+        .hero-meta a,
+        .hero-meta span {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: .4px;
+
+            transition: color .3s ease;
+        }
+
+        .hero-meta a:hover {
+            color: var(--primary);
+        }
+
+        .hero-meta .m-icon {
+            color: var(--secondary);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           TIMELINE — EXPERIENCE & ORGANIZATION
+        ========================================================= */
+
+        .timeline {
+
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 28px;
+
+            margin-top: 18px;
+        }
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 10px;
+
+            bottom: 10px;
+
+            left: 7px;
+
+            width: 1px;
+
+            background: linear-gradient(
+                180deg,
+                var(--primary),
+                var(--secondary),
+                transparent
+            );
+
+            opacity: .4;
+        }
+
+        .tl-item {
+
+            position: relative;
+
+            padding-left: 46px;
+        }
+
+        .tl-dot {
+
+            position: absolute;
+
+            top: 5px;
+
+            left: 0;
+
+            width: 15px;
+
+            height: 15px;
+
+            border: 1px solid var(--primary);
+
+            border-radius: 50%;
+
+            background: var(--bg);
+
+            box-shadow: 0 0 12px var(--primary-glow);
+        }
+
+        .tl-item:nth-child(2) .tl-dot {
+            border-color: var(--secondary);
+            box-shadow: 0 0 12px var(--secondary-glow);
+        }
+
+        .tl-item:nth-child(3) .tl-dot {
+            border-color: var(--purple);
+            box-shadow: 0 0 12px var(--purple-glow);
+        }
+
+        .tl-date {
+
+            color: var(--primary);
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        .tl-item h3 {
+
+            margin: 12px 0 5px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(19px, 2.4vw, 24px);
+
+            letter-spacing: -1px;
+        }
+
+        .tl-role {
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+        .tl-role em {
+
+            color: var(--secondary);
+
+            font-style: normal;
+        }
+
+        .tl-points {
+
+            margin-top: 16px;
+
+            padding-left: 18px;
+
+            list-style: none;
+        }
+
+        .tl-points li {
+
+            position: relative;
+
+            margin-bottom: 11px;
+
+            color: var(--muted);
+
+            font-size: 11.5px;
+
+            line-height: 1.8;
+        }
+
+        .tl-points li::before {
+
+            content: "▸";
+
+            position: absolute;
+
+            left: -18px;
+
+            color: var(--primary);
+
+            font-size: 10px;
+        }
+
+
+        /* =========================================================
+           SKILL GROUPS
+        ========================================================= */
+
+        .skill-groups {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+
+            margin-top: 45px;
+        }
+
+        .skills-layout .skill-groups {
+            margin-top: 0;
+        }
+
+        .skill-group {
+
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            background: var(--surface);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+        .skill-group:hover {
+
+            transform: translateY(-4px);
+
+            border-color: rgba(0, 255, 136, .28);
+        }
+
+        .skill-group-head {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .skill-group-head .g-icon {
+
+            display: grid;
+
+            place-items: center;
+
+            width: 32px;
+
+            height: 32px;
+
+            flex-shrink: 0;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: rgba(0, 255, 136, .06);
+
+            color: var(--primary);
+
+            font-size: 12px;
+        }
+
+        .skill-group-head strong {
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: .3px;
+        }
+
+        .skill-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
+        .skill-tag {
+
+            padding: 7px 12px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50px;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            transition:
+                color .3s ease,
+                border-color .3s ease;
+        }
+
+        .skill-tag:hover {
+
+            color: var(--white);
+
+            border-color: rgba(0, 212, 255, .4);
+        }
+
+
+        /* =========================================================
+           CONTACT LINKS
+        ========================================================= */
+
+        .contact-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            margin-top: 44px;
+        }
+
+        .contact-links a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 24px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: .5px;
+
+            transition:
+                color .3s ease,
+                border-color .3s ease,
+                transform .3s ease;
+        }
+
+        .contact-links a:hover {
+
+            transform: translateY(-3px);
+
+            color: var(--white);
+
+            border-color: rgba(0, 255, 136, .4);
+        }
+
+        .contact-links .c-icon {
+
+            color: var(--primary);
+
+            font-size: 11px;
+        }
+
 
         /* =========================================================
            CONTACT
@@ -2608,6 +3010,43 @@
             color: var(--muted-2);
 
             font-size: 9px;
+        }
+
+        .footer-meta {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-end;
+
+            gap: 12px;
+
+            text-align: right;
+        }
+
+        .footer-social {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+
+            gap: 8px 20px;
+        }
+
+        .footer-social a {
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            transition: color .3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--primary);
         }
 
         .footer-bottom {
@@ -2975,6 +3414,17 @@
                 gap: 20px;
             }
 
+            .footer-meta {
+
+                align-items: flex-start;
+
+                text-align: left;
+            }
+
+            .footer-social {
+                justify-content: flex-start;
+            }
+
             .footer-links {
                 flex-wrap: wrap;
             }
@@ -2996,6 +3446,862 @@
                 transition-duration: .01ms !important;
             }
 
+        }
+
+        /* Calm, light portfolio theme */
+        :root {
+            --bg: #fbfaf8;
+            --bg-soft: #fbfaf8;
+            --surface: #ffffff;
+            --surface-light: #f4f1ed;
+            --primary: #9a8066;
+            --primary-glow: rgba(154, 128, 102, .12);
+            --secondary: #9a8066;
+            --secondary-glow: rgba(154, 128, 102, .12);
+            --accent: #9a8066;
+            --accent-glow: rgba(154, 128, 102, .12);
+            --purple: #9a8066;
+            --purple-glow: rgba(154, 128, 102, .12);
+            --blue: #8b735b;
+            --blue-light: #9a8066;
+            --white: #292722;
+            --text: #45413b;
+            --muted: #77716a;
+            --muted-2: #918a82;
+            --border: #e9e5df;
+            --container: 1120px;
+        }
+
+        html {
+            scroll-padding-top: 88px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--white);
+            font-family: "DM Sans", sans-serif;
+            opacity: 1;
+            animation: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .cyber-grid,
+        .floating-shapes,
+        .glow-orb,
+        .scanlines,
+        .cursor-glow,
+        #particleCanvas,
+        .sparkle {
+            display: none !important;
+        }
+
+        .container {
+            width: min(var(--container), calc(100% - 64px));
+        }
+
+        .navbar,
+        .navbar.scrolled {
+            background: rgba(251, 250, 248, .94);
+            border-bottom: 1px solid rgba(41, 39, 34, .08);
+            box-shadow: none;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            animation: none;
+        }
+
+        .nav-inner {
+            min-height: 76px;
+        }
+
+        .logo,
+        .footer-logo {
+            color: #292722;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo span,
+        .footer-logo span {
+            color: var(--blue);
+        }
+
+        .nav-menu {
+            gap: 27px;
+        }
+
+        .nav-menu a {
+            color: #625d56;
+            font-size: 13px;
+        }
+
+        .nav-menu a:hover {
+            color: #292722;
+        }
+
+        .nav-menu a::after {
+            background: var(--blue);
+        }
+
+        .nav-menu a:last-child {
+            padding: 11px 16px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: #45413b;
+        }
+
+        .nav-menu a:last-child::after {
+            display: none;
+        }
+
+        .hero {
+            min-height: auto;
+            padding: 150px 24px 88px;
+            overflow: visible;
+            background: transparent;
+        }
+
+        .hero-content {
+            width: min(100%, 900px);
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, .8fr);
+            align-items: center;
+            column-gap: clamp(32px, 6vw, 78px);
+            text-align: left;
+        }
+
+        .hero-badge {
+            grid-column: 1;
+            justify-self: start;
+        }
+
+        .hero-title {
+            grid-column: 1;
+            text-align: left;
+            font-size: clamp(58px, 7.5vw, 94px);
+        }
+
+        .hero-badge {
+            margin-bottom: 25px;
+            padding: 8px 13px;
+            border: 1px solid #e8e2d9;
+            background: #f5f1eb;
+            animation: none;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background: #8d987d;
+            box-shadow: none;
+            animation: none;
+        }
+
+        .badge-text {
+            color: #6d725f;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            margin-bottom: 0;
+            color: #292722;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(58px, 9.5vw, 112px);
+            font-weight: 600;
+            line-height: .96;
+            letter-spacing: -.075em;
+        }
+
+        .hero-title .line-one,
+        .hero-title .line-two {
+            display: block;
+            color: #292722;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .hero-title .line-two {
+            color: var(--blue);
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -.055em;
+        }
+
+        .hero-title .line-three,
+        .hero-title .line-four {
+            display: inline;
+            color: #77716a;
+            font-size: .54em;
+            font-weight: 400;
+            letter-spacing: -.04em;
+            text-shadow: none;
+        }
+
+        .text-reveal {
+            animation: none;
+        }
+
+        .hero-subtitle {
+            grid-column: 1;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 19px;
+            color: #77716a;
+            font-size: 13px;
+            letter-spacing: .01em;
+            animation: none;
+        }
+
+        .hero-subtitle i {
+            color: #b7a58f;
+        }
+
+        .hero-photo {
+            grid-column: 2;
+            grid-row: 1 / span 4;
+            width: 100%;
+            height: min(450px, 44vw);
+            margin: 0;
+            animation: none;
+        }
+
+        .hero-photo::before,
+        .hero-photo::after {
+            display: none;
+        }
+
+        .hero-photo img {
+            filter: drop-shadow(0 18px 24px rgba(58, 48, 37, .1));
+        }
+
+        .hero-actions {
+            grid-column: 1;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-top: 24px;
+            animation: none;
+        }
+
+        .button,
+        .contact-button {
+            min-height: 46px;
+            padding: 0 20px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            font-size: 13px;
+            transition: background .25s ease, color .25s ease, transform .25s ease;
+        }
+
+        .button-primary {
+            background: #8b735b;
+            box-shadow: none;
+            color: #fff;
+        }
+
+        .button-primary:hover,
+        .contact-button:hover {
+            background: #715c48;
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border-color: var(--border);
+            background: #fff;
+            color: #45413b;
+        }
+
+        .button-outline:hover {
+            border-color: #cbbba8;
+            background: #f7f4ef;
+            transform: translateY(-2px);
+        }
+
+        .marquee {
+            display: none;
+        }
+
+        .section {
+            padding: 92px 0;
+        }
+
+        .section-label {
+            gap: 12px;
+            margin-bottom: 34px;
+            color: #77716a;
+            font-size: 10px;
+            letter-spacing: 1.8px;
+        }
+
+        .section-label span {
+            color: #a28c73;
+        }
+
+        .eyebrow {
+            color: #9a8066;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .about-grid,
+        .skills-layout {
+            grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+            gap: 70px;
+        }
+
+        .about-heading h2,
+        .works-header h2,
+        .process-heading h2,
+        .skills-heading h2 {
+            color: #292722;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(34px, 4vw, 52px);
+            font-weight: 500;
+            line-height: 1.12;
+            letter-spacing: -.055em;
+        }
+
+        .about-heading h2 em,
+        .works-header h2 em,
+        .process-heading h2 em,
+        .skills-heading h2 em,
+        .contact h2 em {
+            color: var(--blue);
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        .about-content .large-text {
+            color: #45413b;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .about-content p,
+        .skills-heading > p:last-child,
+        .works-header > p {
+            color: #77716a;
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .about-info {
+            gap: 14px;
+            margin-top: 27px;
+        }
+
+        .info-item {
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #fff;
+        }
+
+        .info-item small {
+            color: #918a82;
+        }
+
+        .info-item strong {
+            color: #45413b;
+        }
+
+        .works-header {
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 42px;
+        }
+
+        .project,
+        .project.reverse {
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+            gap: clamp(28px, 5vw, 72px);
+            align-items: center;
+            margin-bottom: 62px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            transform: none !important;
+        }
+
+        .project.reverse .project-image {
+            order: 0;
+        }
+
+        .project.reverse .project-content {
+            order: 0;
+        }
+
+        .project-image {
+            min-height: 0;
+            height: clamp(260px, 34vw, 410px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid rgba(41, 39, 34, .06);
+            border-radius: 18px;
+            background: #f2eee8;
+            box-shadow: 0 12px 35px rgba(58, 48, 37, .06);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .project-content {
+            padding: 0;
+        }
+
+        .project-number,
+        .project-category {
+            color: #9a8066;
+            font-size: 10px;
+            letter-spacing: 1.3px;
+        }
+
+        .project-content h3 {
+            margin-top: 12px;
+            color: #292722;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(24px, 3vw, 34px);
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -.04em;
+        }
+
+        .project-content > p {
+            margin-top: 14px;
+            color: #77716a;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .project-details {
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .project-details span {
+            color: #918a82;
+            font-size: 9px;
+        }
+
+        .project-details strong {
+            color: #45413b;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            gap: 8px;
+            margin-top: 24px;
+            color: #8b735b;
+            font-size: 13px;
+        }
+
+        .process-heading {
+            margin-bottom: 32px;
+        }
+
+        .process-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .process-card {
+            padding: 24px 20px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: none;
+            transition: transform .25s ease, border-color .25s ease;
+        }
+
+        .process-card:hover {
+            border-color: #d7c8b7;
+            transform: translateY(-3px);
+        }
+
+        .process-number,
+        .process-icon {
+            color: #a28c73;
+        }
+
+        .process-icon {
+            margin: 22px 0 15px;
+        }
+
+        .process-card h3 {
+            color: #292722;
+            font-size: 17px;
+        }
+
+        .process-card p {
+            color: #77716a;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .skill-row {
+            border-bottom-color: var(--border);
+        }
+
+        .skill-number,
+        .skill-row small {
+            color: #918a82;
+        }
+
+        .skill-row strong {
+            color: #45413b;
+        }
+
+        .tools {
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .tools span {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: #fff;
+            color: #6b655e;
+            font-size: 11px;
+        }
+
+        .education-card {
+            gap: 40px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: none;
+        }
+
+        .education-year {
+            color: #9a8066;
+        }
+
+        .education-card h2 {
+            color: #292722;
+            font-weight: 500;
+            letter-spacing: -.05em;
+        }
+
+        .education-major,
+        .education-description p {
+            color: #77716a;
+        }
+
+        .contact {
+            min-height: 0;
+            padding: 100px 24px;
+            border-top: 1px solid var(--border);
+            background: #f5f2ed;
+        }
+
+        .contact::before {
+            display: none;
+        }
+
+        .contact h2 {
+            max-width: 760px;
+            color: #292722;
+            font-size: clamp(42px, 7vw, 76px);
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -.06em;
+        }
+
+        .contact-description {
+            color: #77716a;
+            font-size: 14px;
+        }
+
+        .contact-button {
+            min-height: 46px;
+            background: #8b735b;
+            color: #fff;
+        }
+
+        footer {
+            padding: 38px 0 28px;
+            background: #fbfaf8;
+        }
+
+        .footer-top {
+            border-bottom-color: var(--border);
+        }
+
+        .footer-top p,
+        .footer-bottom {
+            color: #918a82;
+            font-size: 11px;
+        }
+
+        .footer-links a:hover {
+            color: #292722;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            background: #fff;
+            color: #45413b;
+            font-size: 18px;
+        }
+
+        @media (min-width: 701px) {
+            .nav-menu {
+                display: flex !important;
+            }
+
+            .mobile-toggle {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-badge {
+                align-self: center;
+            }
+
+            .hero-title {
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                justify-content: center;
+            }
+
+            .hero-photo {
+                width: min(330px, 78vw);
+                height: 330px;
+                margin: 20px auto 0;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-grid,
+            .skills-layout {
+                gap: 38px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-inner {
+                min-height: 68px;
+            }
+
+            .mobile-toggle {
+                display: inline-flex !important;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: calc(100% + 8px);
+                left: 20px;
+                right: 20px;
+                display: none !important;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px;
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                background: #fff;
+                box-shadow: 0 14px 35px rgba(58, 48, 37, .09);
+            }
+
+            .nav-menu.mobile-open {
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .nav-menu a,
+            .nav-menu a:last-child {
+                padding: 12px;
+                border: 0;
+                border-radius: 8px;
+            }
+
+            .nav-menu a:hover {
+                background: #f7f4ef;
+            }
+
+            .hero {
+                padding: 126px 20px 70px;
+            }
+
+            .hero-title {
+                font-size: clamp(52px, 13vw, 82px);
+                letter-spacing: -.07em;
+            }
+
+            .hero-subtitle {
+                font-size: 11px;
+            }
+
+            .hero-photo {
+                width: min(285px, 78vw);
+                height: 290px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .about-grid,
+            .skills-layout,
+            .project,
+            .project.reverse {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .works-header {
+                display: block;
+            }
+
+            .works-header > p {
+                margin-top: 18px;
+            }
+
+            .project {
+                margin-bottom: 46px;
+            }
+
+            .project-image {
+                height: min(78vw, 340px);
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-card {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                padding: 26px 22px;
+            }
+
+            .skill-groups {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-group {
+                padding: 24px 20px;
+            }
+
+            .timeline {
+                gap: 24px;
+            }
+
+            .tl-item {
+                padding-left: 36px;
+            }
+
+            .hero-meta {
+                gap: 10px 18px;
+            }
+
+            .contact {
+                padding: 76px 20px;
+            }
+
+            .contact h2 {
+                font-size: clamp(40px, 11vw, 60px);
+                letter-spacing: -.055em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: min(100%, 220px);
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-row {
+                grid-template-columns: 30px 1fr;
+                gap: 8px;
+                padding: 15px 0;
+            }
+
+            .skill-row small {
+                grid-column: 2;
+            }
+
+            .footer-top,
+            .footer-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal,
+            .reveal.active {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
         }
 
     </style>
@@ -3044,7 +4350,7 @@
             </a>
 
 
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="navMenu">
 
                 <a href="#about">
                     About
@@ -3052,6 +4358,10 @@
 
                 <a href="#works">
                     Works
+                </a>
+
+                <a href="#experience">
+                    Experience
                 </a>
 
                 <a href="#process">
@@ -3076,7 +4386,10 @@
             <button
                 class="mobile-toggle"
                 id="mobileToggle"
+                type="button"
                 aria-label="Menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
             >
                 ☰
             </button>
@@ -3105,19 +4418,11 @@
                 <h1 class="hero-title">
 
                     <span class="line-one">
-                        <span class="text-reveal">UI/UX</span>
+                        <span class="text-reveal">Portofolio</span>
                     </span>
 
                     <span class="line-two">
-                        <span class="text-reveal" style="animation-delay: 0.3s">Designer</span>
-                    </span>
-
-                    <span class="line-three">
-                        <span class="text-reveal" style="animation-delay: 0.6s">&</span>
-                    </span>
-
-                    <span class="line-four">
-                        <span class="text-reveal" style="animation-delay: 0.9s">Dev</span>
+                        <span class="text-reveal" style="animation-delay: 0.3s">Silva Aulia Nursamsiah</span>
                     </span>
 
                 </h1>
@@ -3125,34 +4430,25 @@
 
                 <div class="hero-subtitle">
 
-                </div>
+                    <span>
+                        UI/UX Web/Mobile
+                    </span>
 
-                </h1>
-
-
-                <div class="hero-subtitle">
+                    <i>•</i>
 
                     <span>
                         Front-end Dev
                     </span>
-
+            
                     <i>•</i>
 
                     <span>
-                        UI/UX Design
-                    </span>
-
-                    <i>•</i>
-
-                    <span>
-                        Web Design
+                        Backend Dev
                     </span>
                     <i>•</i>
-
                     <span>
-                        Fullstack Dev
+                        Administrasi
                     </span>
-
                 </div>
 
 
@@ -3170,6 +4466,35 @@
 
                 </div>
 
+
+                <div class="hero-meta">
+
+                    <span>
+                        <span class="m-icon">◉</span>
+                        Kab. Cianjur, Jawa Barat
+                    </span>
+
+                    <a href="mailto:silvaaulia166@gmail.com">
+                        <span class="m-icon">✉</span>
+                        silvaaulia166@gmail.com
+                    </a>
+
+                    <a href="https://wa.me/62895394577788" target="_blank" rel="noopener noreferrer">
+                        <span class="m-icon">☎</span>
+                        +62 895 3945 77788
+                    </a>
+
+                    <a href="https://linkedin.com/in/silva-aulia-nursamsiah-b9434423b" target="_blank" rel="noopener noreferrer">
+                        <span class="m-icon">in</span>
+                        LinkedIn
+                    </a>
+
+                    <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
+                        <span class="m-icon"></span>
+                        portofolio-silva.up.railway.app
+                    </a>
+
+                </div>
 
 
 
@@ -3277,20 +4602,35 @@
 
                         <p class="large-text">
 
-                            Saya adalah lulusan Teknik Informatika
-                            yang memiliki ketertarikan besar pada dunia
-                            desain digital, terutama Front-end Development, UI/UX Design,
-                            dan fullstack Development
+                            Fresh Graduate Teknik Informatika dengan fokus
+                            pada UI/UX Design, Frontend Development,
+                            dan Backend Development.
 
                         </p>
 
 
                         <p>
 
-                            Saya menikmati proses mengubah ide dan
-                            permasalahan menjadi tampilan digital
-                            yang sederhana, menarik, dan mudah
-                            digunakan.
+                            Saya memiliki pemahaman dan pengalaman dalam
+                            pengembangan perangkat lunak, perancangan
+                            antarmuka pengguna, pengelolaan basis data,
+                            serta manajemen proyek IT. Saya menikmati
+                            proses mengubah ide dan permasalahan menjadi
+                            tampilan digital yang sederhana, menarik,
+                            dan mudah digunakan.
+
+                        </p>
+
+
+                        <p>
+
+                            Terampil menggunakan Figma untuk membuat desain
+                            antarmuka, user flow, wireframe, dan prototype.
+                            Memahami pengelolaan basis data menggunakan
+                            MySQL, pengolahan data dengan Microsoft Excel,
+                            penyusunan dokumen dengan Microsoft Word,
+                            serta pengelolaan kode sumber menggunakan
+                            Git dan GitHub.
 
                         </p>
 
@@ -3318,7 +4658,7 @@
                                 </strong>
 
                                 <small>
-                                    Universitas Suryakancana
+                                    Universitas Suryakancana · 2022 — 2026
                                 </small>
 
                             </div>
@@ -3335,10 +4675,27 @@
                                 </strong>
 
                                 <small>
-                                    UI/UX · Visual · Web
+                                    UI/UX · Frontend · Backend
                                 </small>
 
                             </div>
+
+
+                            <div class="info-item">
+
+                                <span>
+                                    LANGUAGES
+                                </span>
+
+                                <strong>
+                                    Ahli · Bahasa Indonesia 
+                                </strong>
+                                <strong>
+                                    Menengah · Bahasa Inggris 
+                                </strong>
+
+                            </div>
+
 
                         </div>
 
@@ -3405,7 +4762,7 @@
                     <div class="project-content">
 
                         <span class="project-number">
-                            01 / 03
+                            01 / 06
                         </span>
 
                         <span class="project-category">
@@ -3487,7 +4844,7 @@
                     <div class="project-content">
 
                         <span class="project-number">
-                            02 / 03
+                            02 / 06
                         </span>
 
                         <span class="project-category">
@@ -3624,7 +4981,7 @@
                     <div class="project-content">
 
                         <span class="project-number">
-                            02 / 05
+                            02 / 06
                         </span>
 
                         <span class="project-category">
@@ -3701,7 +5058,7 @@
                     <div class="project-content">
 
                         <span class="project-number">
-                            03 / 03
+                            03 / 06
                         </span>
 
                         <span class="project-category">
@@ -3779,11 +5136,11 @@
                     <div class="project-content">
 
                         <span class="project-number">
-                            05 / 06
+                            04 / 06
                         </span>
 
                         <span class="project-category">
-                            WEB APPLICATION · LARAVEL
+                            WEB APPLICATION · JAVASCRIPT
                         </span>
 
 
@@ -3794,7 +5151,11 @@
 
                         <p>
 
-                            Aplikasi web DevTools untuk developers yang dirancang untuk membantu coding, testing, dan debugging dengan fitur-fitur productivity tools yang lengkap.
+                            Website berisi 24 browser-based developer tools
+                            yang mencakup formatter, converter, encoder/decoder,
+                            validator, Regex Tester, Timestamp Converter,
+                            YAML↔JSON, CSV↔JSON, JSON↔XML, JavaScript minifier,
+                            CSS minifier, dan berbagai tools developer lainnya.
 
                         </p>
 
@@ -3808,7 +5169,7 @@
                                 </span>
 
                                 <strong>
-                                    Full Stack Developer
+                                    Front-end Developer
                                 </strong>
 
                             </div>
@@ -3821,7 +5182,7 @@
                                 </span>
 
                                 <strong>
-                                    Laravel · MySQL · Vue.js
+                                    HTML · CSS · JavaScript
                                 </strong>
 
                             </div>
@@ -3835,6 +5196,152 @@
                             class="project-link"
                         >
                             View Project
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="project reveal">
+
+                    <div class="project-image project-orange">
+                        <img
+                            src="{{ asset('images/zona-ft-pmb.jpg') }}"
+                            alt="Desain Instagram PMB Telah Dibuka Fakultas Teknik UNSUR"
+                        >
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            05 / 06
+                        </span>
+
+                        <span class="project-category">
+                            SOCIAL MEDIA · PROMOSI PENDIDIKAN
+                        </span>
+
+                        <h3>
+                            Promosi PMB Fakultas Teknik UNSUR
+                        </h3>
+
+                        <p>
+                            Desain informasi dan promosi penerimaan mahasiswa baru Fakultas Teknik Universitas Suryakancana. Visual menonjolkan pengumuman “PMB Telah Dibuka” dan mengarahkan calon mahasiswa ke informasi pendaftaran melalui Instagram.
+                        </p>
+
+                        <div class="project-details">
+
+                            <div>
+                                <span>
+                                    PERAN
+                                </span>
+
+                                <strong>
+                                    Desainer
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    KANAL
+                                </span>
+
+                                <strong>
+                                    Instagram · Zona FT UNSUR
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://www.instagram.com/zonaftunsur/p/DRtcbCqgawm/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            Lihat Postingan Instagram
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 06 -->
+
+                <article class="project reverse reveal">
+
+                    <div class="project-image project-dark">
+
+                        <img src="{{ asset('images/mock-market.png') }}" alt="Mini Market Management System" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,.4);">
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            06 / 06
+                        </span>
+
+                        <span class="project-category">
+                            WEB APPLICATION · POINT OF SALE
+                        </span>
+
+
+                        <h3>
+                            Mini Market Management System
+                        </h3>
+
+
+                        <p>
+
+                            Aplikasi web untuk mengelola transaksi
+                            dan pengecekan stok pada beberapa cabang.
+                            Sistem membantu pencatatan penjualan
+                            serta pemantauan ketersediaan stok
+                            secara terstruktur di setiap outlet.
+
+                        </p>
+
+
+                        <div class="project-details">
+
+                            <div>
+
+                                <span>
+                                    ROLE
+                                </span>
+
+                                <strong>
+                                    Web Developer
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    TECHNOLOGY
+                                </span>
+
+                                <strong>
+                                    Laravel · MySQL
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="project-link"
+                        >
+                            View Case Study
                             <span>↗</span>
                         </a>
 
@@ -3875,7 +5382,7 @@
                     <!-- <div class="project-content">
 
                         <span class="project-number">
-                            05 / 05
+                            05 / 06
                         </span>
 
                         <span class="project-category">
@@ -3938,10 +5445,187 @@
                         </a>
 
                     </div> -->
-<!-- 
-                </article>
 
-            </div> -->
+                <!--
+                </article>
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WORK EXPERIENCE
+        ====================================================== -->
+
+        <section class="section" id="experience">
+
+            <div class="container">
+
+                <div class="section-label">
+                    <span>03</span>
+                    WORK EXPERIENCE
+                </div>
+
+
+                <div class="works-header reveal">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            WHERE I'VE WORKED
+                        </p>
+
+                        <h2>
+                            Professional
+                            <em>experience.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Pengalaman bekerja di bidang desain antarmuka,
+                        pembuatan konten digital, serta promosi
+                        program studi kampus.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline reveal">
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            OKT 2025 — DES 2025
+                        </span>
+
+                        <h3>
+                            UI/UX Designer
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>Part Time · Remote</em> — Slerate, Singapore
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Merancang antarmuka website desktop dan
+                                mobile menggunakan Figma dengan
+                                memperhatikan struktur halaman dan
+                                pengalaman pengguna.
+                            </li>
+
+                            <li>
+                                Menerjemahkan kebutuhan klien ke dalam
+                                rancangan UI/UX menggunakan flowmap dan
+                                user flow sebagai dasar alur navigasi
+                                dan interaksi pengguna.
+                            </li>
+
+                            <li>
+                                Menyusun desain responsif dan mudah
+                                digunakan serta berkolaborasi dengan tim
+                                developer untuk memastikan desain dapat
+                                diimplementasikan sesuai kebutuhan proyek.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            SEP 2025 — MAR 2026
+                        </span>
+
+                        <h3>
+                            Promosi Fakultas
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>Fakultas Teknik</em> — Universitas Suryakancana
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mempromosikan program studi dan kegiatan
+                                Fakultas Teknik kepada calon mahasiswa
+                                melalui penyampaian informasi secara
+                                langsung dan media promosi.
+                            </li>
+
+                            <li>
+                                Memberikan informasi terkait program studi,
+                                fasilitas, kegiatan, pendaftaran, dan
+                                lingkungan perkuliahan kepada calon mahasiswa.
+                            </li>
+
+                            <li>
+                                Berkomunikasi dengan calon mahasiswa serta
+                                membantu menjawab pertanyaan terkait
+                                Fakultas Teknik dan kegiatan kampus.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            JAN 2025 — JAN 2026
+                        </span>
+
+                        <h3>
+                            Freelance Content Creator
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>Freelance</em> — Content & Social Media
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Membuat dan mengelola konten digital
+                                Instagram dan TikTok serta menyesuaikan
+                                materi dengan target audiens.
+                            </li>
+
+                            <li>
+                                Mendesain materi visual dan melakukan
+                                editing foto/video untuk kebutuhan
+                                publikasi.
+                            </li>
+
+                            <li>
+                                Berkomunikasi dengan klien dari proses
+                                produksi, penyesuaian materi, hingga
+                                publikasi.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -3955,7 +5639,7 @@
             <div class="container">
 
                 <div class="section-label">
-                    <span>03</span>
+                    <span>04</span>
                     MY PROCESS
                 </div>
 
@@ -4093,7 +5777,7 @@
             <div class="container">
 
                 <div class="section-label">
-                    <span>04</span>
+                    <span>05</span>
                     SKILLS & TOOLS
                 </div>
 
@@ -4127,89 +5811,260 @@
 
                     <div>
 
-                        <div class="skills-list">
+                        <div class="skill-groups">
 
-                            <div class="skill-row">
+                            <div class="skill-group">
 
-                                <span class="skill-number">
-                                    01
-                                </span>
+                                <div class="skill-group-head">
 
-                                <strong>
-                                    UI/UX Design
-                                </strong>
+                                    <span class="g-icon">⟨⟩</span>
 
-                                <small>
-                                    Figma · Wireframe · Prototype
-                                </small>
+                                    <strong>
+                                        Programming Languages
+                                    </strong>
 
-                            </div>
+                                </div>
 
+                                <div class="skill-tags">
 
-                            <div class="skill-row">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">PHP</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">C++</span>
 
-                                <span class="skill-number">
-                                    02
-                                </span>
-
-                                <strong>
-                                    Visual Design
-                                </strong>
-
-                                <small>
-                                    Layout · Typography · Branding
-                                </small>
+                                </div>
 
                             </div>
 
 
-                            <div class="skill-row">
+                            <div class="skill-group">
 
-                                <span class="skill-number">
-                                    03
-                                </span>
+                                <div class="skill-group-head">
 
-                                <strong>
-                                    Web Design
-                                </strong>
+                                    <span class="g-icon">◆</span>
 
-                                <small>
-                                    HTML · CSS · Responsive Design
-                                </small>
+                                    <strong>
+                                        UI/UX Design
+                                    </strong>
 
-                            </div>
+                                </div>
 
+                                <div class="skill-tags">
 
-                            <div class="skill-row">
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">User Flow</span>
+                                    <span class="skill-tag">Flowmap</span>
+                                    <span class="skill-tag">Wireframing</span>
+                                    <span class="skill-tag">Prototyping</span>
+                                    <span class="skill-tag">UI Design</span>
+                                    <span class="skill-tag">Design System</span>
+                                    <span class="skill-tag">Component Design</span>
+                                    <span class="skill-tag">Responsive Design</span>
+                                    <span class="skill-tag">Usability Principles</span>
 
-                                <span class="skill-number">
-                                    04
-                                </span>
-
-                                <strong>
-                                    Graphic Design
-                                </strong>
-
-                                <small>
-                                    Visual Content · Social Media
-                                </small>
+                                </div>
 
                             </div>
 
 
-                            <div class="skill-row">
+                            <div class="skill-group">
 
-                                <span class="skill-number">
-                                    05
-                                </span>
+                                <div class="skill-group-head">
 
-                                <strong>
-                                    Web Development
-                                </strong>
+                                    <span class="g-icon">▤</span>
 
-                                <small>
-                                    Laravel · PHP · MySQL
-                                </small>
+                                    <strong>
+                                        Frontend Development
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">Bootstrap</span>
+                                    <span class="skill-tag">Responsive Web Design</span>
+                                    <span class="skill-tag">DOM Manipulation</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">⬡</span>
+
+                                    <strong>
+                                        Backend Development
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">Laravel</span>
+                                    <span class="skill-tag">Routing</span>
+                                    <span class="skill-tag">Controller</span>
+                                    <span class="skill-tag">CRUD Operations</span>
+                                    <span class="skill-tag">REST API</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">⛁</span>
+
+                                    <strong>
+                                        Database Management
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Database Design</span>
+                                    <span class="skill-tag">Relational Database</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">▦</span>
+
+                                    <strong>
+                                        Office & Data Management
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">Microsoft Excel</span>
+                                    <span class="skill-tag">Microsoft Word</span>
+                                    <span class="skill-tag">Data Entry</span>
+                                    <span class="skill-tag">Data Processing</span>
+                                    <span class="skill-tag">Data Management</span>
+                                    <span class="skill-tag">Sorting & Filtering</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">⚙</span>
+
+                                    <strong>
+                                        Development Tools
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">Visual Studio Code</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">XAMPP</span>
+                                    <span class="skill-tag">Browser Developer Tools</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">✦</span>
+
+                                    <strong>
+                                        Design & Content Tools
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">Canva</span>
+                                    <span class="skill-tag">CapCut</span>
+                                    <span class="skill-tag">Adobe Illustrator</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">⌁</span>
+
+                                    <strong>
+                                        Software Development & Analysis
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">System Analysis</span>
+                                    <span class="skill-tag">Requirements Analysis</span>
+                                    <span class="skill-tag">Use Case Diagram</span>
+                                    <span class="skill-tag">Activity Diagram</span>
+                                    <span class="skill-tag">Class Diagram</span>
+                                    <span class="skill-tag">Sequence Diagram</span>
+                                    <span class="skill-tag">System Flowchart</span>
+                                    <span class="skill-tag">Software Testing</span>
+                                    <span class="skill-tag">Debugging</span>
+                                    <span class="skill-tag">Waterfall Methodology</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-group">
+
+                                <div class="skill-group-head">
+
+                                    <span class="g-icon">◎</span>
+
+                                    <strong>
+                                        Languages
+                                    </strong>
+
+                                </div>
+
+                                <div class="skill-tags">
+
+                                    <span class="skill-tag">Bahasa Indonesia (Ahli)</span>
+                                    <span class="skill-tag">Bahasa Inggris (Menengah)</span>
+
+                                </div>
 
                             </div>
 
@@ -4219,13 +6074,19 @@
                         <div class="tools">
 
                             <span>Figma</span>
-                            <span>Adobe Illustrator</span>
                             <span>Laravel</span>
-                            <span>PHP</span>
                             <span>MySQL</span>
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>Visual Studio Code</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>XAMPP</span>
+                            <span>Canva</span>
+                            <span>CapCut</span>
+                            <span>Adobe Illustrator</span>
 
                         </div>
 
@@ -4247,7 +6108,7 @@
             <div class="container">
 
                 <div class="section-label">
-                    <span>05</span>
+                    <span>06</span>
                     EDUCATION
                 </div>
 
@@ -4257,7 +6118,7 @@
                     <div>
 
                         <p class="education-year">
-                            2022 — PRESENT
+                            SEP 2022 — JUN 2026
                         </p>
 
                         <h2>
@@ -4266,8 +6127,13 @@
                         </h2>
 
                         <p class="education-major">
-                            Teknik Informatika
+                            S1 Teknik Informatika
                         </p>
+
+                        <div class="edu-badge">
+                            IPK 3,69 / 4,00
+                            <span>· Fresh Graduate</span>
+                        </div>
 
                     </div>
 
@@ -4276,16 +6142,185 @@
 
                         <p>
 
-                            Mempelajari pengembangan perangkat
-                            lunak, database, sistem informasi,
-                            analisis sistem, UI/UX, dan
-                            pengembangan website.
-
-                            Pengalaman tersebut menjadi dasar
-                            dalam menggabungkan kemampuan desain
-                            dengan teknologi digital.
+                            Mempelajari pengembangan perangkat lunak,
+                            pemrograman web, basis data, rekayasa
+                            perangkat lunak, serta perancangan antarmuka
+                            dan pengalaman pengguna. Aktif mengerjakan
+                            berbagai proyek website dan aplikasi sebagai
+                            penerapan kemampuan teknis, analisis kebutuhan,
+                            UI/UX, database, dan pengembangan sistem.
 
                         </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ORGANIZATION
+        ====================================================== -->
+
+        <section class="section" id="organization">
+
+            <div class="container">
+
+                <div class="section-label">
+                    <span>07</span>
+                    ORGANIZATION
+                </div>
+
+
+                <div class="works-header reveal">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LEADERSHIP & CONTRIBUTIONS
+                        </p>
+
+                        <h2>
+                            Beyond the
+                            <em>code.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Pengalaman berorganisasi dalam divisions
+                        keuangan serta sekretariat yang membentuk
+                        kemampuan administrasi, dokumentasi,
+                        dan koordinasi tim.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline reveal">
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            APR 2025 — JUN 2025
+                        </span>
+
+                        <h3>
+                            Bendahara
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>KKN-T</em> — Bendahara Tim KKN-T
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola dan mencatat pemasukan serta
+                                pengeluaran selama kegiatan KKN-T.
+                            </li>
+
+                            <li>
+                                Menyusun laporan keuangan dan memastikan
+                                penggunaan dana sesuai dengan kebutuhan
+                                kegiatan.
+                            </li>
+
+                            <li>
+                                Berkoordinasi dengan anggota tim terkait
+                                kebutuhan dan pertanggungjawaban keuangan.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            SEP 2023 — MAR 2024
+                        </span>
+
+                        <h3>
+                            Sekretaris
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>SINERGI</em> — Sekretariat Organisasi
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola dan memperbarui data
+                                administrasi serta dokumentasi kegiatan
+                                organisasi.
+                            </li>
+
+                            <li>
+                                Menyusun dan mengarsipkan dokumen secara
+                                terstruktur untuk mendukung kebutuhan
+                                administrasi.
+                            </li>
+
+                            <li>
+                                Mencatat informasi kegiatan dan
+                                mengoordinasikan kebutuhan administrasi
+                                antaranggota.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            JAN 2021 — JAN 2022
+                        </span>
+
+                        <h3>
+                            Sekretaris
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>KARIPRAK</em> — Sekretariat Organisasi
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola data administrasi, agenda
+                                kegiatan, dan dokumen organisasi
+                                secara terstruktur.
+                            </li>
+
+                            <li>
+                                Menyusun, mencatat, dan mengarsipkan
+                                dokumen untuk memudahkan pencarian
+                                informasi.
+                            </li>
+
+                            <li>
+                                Mengelola informasi kegiatan dan membantu
+                                memastikan kebutuhan administrasi
+                                terdokumentasi dengan baik.
+                            </li>
+
+                        </ul>
 
                     </div>
 
@@ -4326,11 +6361,42 @@
             <a
                 href="https://wa.me/62895394577788"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="contact-button"
             >
                 Contact Me
                 <span>↗</span>
             </a>
+
+
+            <div class="contact-links">
+
+                <a href="mailto:silvaaulia166@gmail.com">
+                    <span class="c-icon">✉</span>
+                    silvaaulia166@gmail.com
+                </a>
+
+                <a href="https://wa.me/62895394577788" target="_blank" rel="noopener noreferrer">
+                    <span class="c-icon">☎</span>
+                    +62 895 3945 77788
+                </a>
+
+                <a href="https://linkedin.com/in/silva-aulia-nursamsiah-b9434423b" target="_blank" rel="noopener noreferrer">
+                    <span class="c-icon">in</span>
+                    LinkedIn
+                </a>
+
+                <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
+                    <span class="c-icon">⚡</span>
+                    Live Portfolio
+                </a>
+
+                <a href="{{ asset('images/Silva_Aulia Nursamsiah_CV terbaru.pdf') }}" download="CV_Silva_Aulia_Nursamsiah.pdf">
+                    <span class="c-icon">↓</span>
+                    Download CV
+                </a>
+
+            </div>
 
         </section>
 
@@ -4352,10 +6418,35 @@
                 </div>
 
 
-                <p>
-                    UI/UX Designer · Visual Designer ·
-                    Informatics Engineering Student
-                </p>
+                <div class="footer-meta">
+
+                    <p>
+                        UI/UX Designer · Frontend Developer ·
+                        Backend Developer · Fresh Graduate Teknik Informatika
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a href="mailto:silvaaulia166@gmail.com">
+                            ✉ silvaaulia166@gmail.com
+                        </a>
+
+                        <a href="https://wa.me/62895394577788" target="_blank" rel="noopener noreferrer">
+                            ☎ +62 895 3945 77788
+                        </a>
+
+                        <a href="https://linkedin.com/in/silva-aulia-nursamsiah-b9434423b" target="_blank" rel="noopener noreferrer">
+                            in LinkedIn
+                        </a>
+
+                        <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
+                            ⚡ Live Portfolio
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -4381,6 +6472,14 @@
                         Works
                     </a>
 
+                    <a href="#experience">
+                        Experience
+                    </a>
+
+                    <a href="#skills">
+                        Skills
+                    </a>
+
                     <a href="#contact">
                         Contact
                     </a>
@@ -4399,156 +6498,6 @@
     ========================================================== -->
 
     <script>
-
-        /* ================================================
-           PARTICLE SYSTEM
-        ================================================= */
-
-        class Particle {
-            constructor(canvas) {
-                this.canvas = canvas;
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.5;
-                this.speedY = (Math.random() - 0.5) * 0.5;
-                this.opacity = Math.random() * 0.5 + 0.2;
-                this.color = ['#00ff88', '#00d4ff', '#8b5cf6'][Math.floor(Math.random() * 3)];
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x < 0 || this.x > this.canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > this.canvas.height) this.speedY *= -1;
-            }
-
-            draw(ctx) {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = this.opacity;
-                ctx.fill();
-                ctx.globalAlpha = 1;
-            }
-        }
-
-        class ParticleSystem {
-            constructor() {
-                this.canvas = document.getElementById('particleCanvas');
-                if (!this.canvas) return;
-
-                this.ctx = this.canvas.getContext('2d');
-                this.particles = [];
-                this.resize();
-
-                window.addEventListener('resize', () => this.resize());
-
-                this.init();
-                this.animate();
-            }
-
-            resize() {
-                this.canvas.width = window.innerWidth;
-                this.canvas.height = window.innerHeight;
-            }
-
-            init() {
-                const particleCount = Math.min(100, Math.floor(window.innerWidth / 15));
-                for (let i = 0; i < particleCount; i++) {
-                    this.particles.push(new Particle(this.canvas));
-                }
-            }
-
-            animate() {
-                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-                this.particles.forEach(particle => {
-                    particle.update();
-                    particle.draw(this.ctx);
-                });
-
-                this.drawConnections();
-
-                requestAnimationFrame(() => this.animate());
-            }
-
-            drawConnections() {
-                for (let i = 0; i < this.particles.length; i++) {
-                    for (let j = i + 1; j < this.particles.length; j++) {
-                        const dx = this.particles[i].x - this.particles[j].x;
-                        const dy = this.particles[i].y - this.particles[j].y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-
-                        if (distance < 150) {
-                            this.ctx.beginPath();
-                            this.ctx.strokeStyle = '#00ff88';
-                            this.ctx.globalAlpha = 0.1 * (1 - distance / 150);
-                            this.ctx.lineWidth = 0.5;
-                            this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
-                            this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-                            this.ctx.stroke();
-                            this.ctx.globalAlpha = 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        // Initialize particle system
-        new ParticleSystem();
-
-
-        /* ================================================
-           CURSOR GLOW EFFECT
-        ================================================= */
-
-        const cursorGlow = document.getElementById('cursorGlow');
-        let mouseX = 0, mouseY = 0;
-        let glowX = 0, glowY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            glowX += (mouseX - glowX) * 0.1;
-            glowY += (mouseY - glowY) * 0.1;
-
-            if (cursorGlow) {
-                cursorGlow.style.left = glowX + 'px';
-                cursorGlow.style.top = glowY + 'px';
-            }
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-
-        /* ================================================
-           TILT EFFECT ON HOVER
-        ================================================= */
-
-        document.querySelectorAll('.project').forEach(project => {
-            project.addEventListener('mousemove', (e) => {
-                const rect = project.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-
-                project.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            });
-
-            project.addEventListener('mouseleave', () => {
-                project.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-            });
-        });
-
 
         document.addEventListener(
             "DOMContentLoaded",
@@ -4632,198 +6581,31 @@
 
 
                 /* ================================================
-                   CURSOR GLOW
-                ================================================= */
-
-                const cursorGlow =
-                    document.getElementById(
-                        "cursorGlow"
-                    );
-
-
-                let mouseX = 0;
-                let mouseY = 0;
-
-                let glowX = 0;
-                let glowY = 0;
-
-
-                document.addEventListener(
-                    "mousemove",
-                    function (event) {
-
-                        mouseX = event.clientX;
-                        mouseY = event.clientY;
-
-                        cursorGlow.style.opacity = "1";
-
-                    }
-                );
-
-
-                document.addEventListener(
-                    "mouseleave",
-                    function () {
-
-                        cursorGlow.style.opacity = "0";
-
-                    }
-                );
-
-
-                function animateCursor() {
-
-                    glowX +=
-                        (mouseX - glowX) * .10;
-
-                    glowY +=
-                        (mouseY - glowY) * .10;
-
-
-                    cursorGlow.style.left =
-                        glowX + "px";
-
-                    cursorGlow.style.top =
-                        glowY + "px";
-
-
-                    requestAnimationFrame(
-                        animateCursor
-                    );
-
-                }
-
-                animateCursor();
-
-
-                /* ================================================
                    MOBILE MENU
                 ================================================= */
 
-                const mobileToggle =
-                    document.getElementById(
-                        "mobileToggle"
-                    );
+                const mobileToggle = document.getElementById("mobileToggle");
+                const navMenu = document.getElementById("navMenu");
 
-                const navMenu =
-                    document.querySelector(
-                        ".nav-menu"
-                    );
-
-
-                mobileToggle.addEventListener(
-                    "click",
-                    function () {
-
-                        const isOpen =
-                            navMenu.classList.contains(
-                                "mobile-open"
-                            );
-
-
-                        if (!isOpen) {
-
-                            navMenu.classList.add(
-                                "mobile-open"
-                            );
-
-                            navMenu.style.position =
-                                "absolute";
-
-                            navMenu.style.top =
-                                "72px";
-
-                            navMenu.style.left =
-                                "20px";
-
-                            navMenu.style.right =
-                                "20px";
-
-                            navMenu.style.display =
-                                "flex";
-
-                            navMenu.style.flexDirection =
-                                "column";
-
-                            navMenu.style.alignItems =
-                                "flex-start";
-
-                            navMenu.style.gap =
-                                "20px";
-
-                            navMenu.style.padding =
-                                "25px";
-
-                            navMenu.style.border =
-                                "1px solid var(--border)";
-
-                            navMenu.style.borderRadius =
-                                "18px";
-
-                            navMenu.style.background =
-                                "rgba(7,10,16,.96)";
-
-                            navMenu.style.backdropFilter =
-                                "blur(20px)";
-
-                        } else {
-
-                            navMenu.classList.remove(
-                                "mobile-open"
-                            );
-
-                            navMenu.removeAttribute(
-                                "style"
-                            );
-
-                        }
-
-                    }
-                );
-
-
-                /* ================================================
-                   CLOSE MOBILE MENU AFTER CLICK
-                ================================================= */
-
-                navMenu
-                    .querySelectorAll("a")
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function () {
-
-                                    navMenu.classList.remove(
-                                        "mobile-open"
-                                    );
-
-                                    navMenu.removeAttribute(
-                                        "style"
-                                    );
-
-                                }
-                            );
-
-                        }
-                    );
-
-
-                /* ================================================
-                   DISABLE CURSOR GLOW ON TOUCH DEVICES
-                ================================================= */
-
-                if (
-                    window.matchMedia(
-                        "(pointer: coarse)"
-                    ).matches
-                ) {
-
-                    cursorGlow.style.display =
-                        "none";
-
+                function closeMobileMenu() {
+                    navMenu.classList.remove("mobile-open");
+                    mobileToggle.setAttribute("aria-expanded", "false");
                 }
+
+                mobileToggle.addEventListener("click", function () {
+                    const isOpen = navMenu.classList.toggle("mobile-open");
+                    mobileToggle.setAttribute("aria-expanded", String(isOpen));
+                });
+
+                navMenu.querySelectorAll("a").forEach(function (link) {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", function () {
+                    if (window.innerWidth > 700) {
+                        closeMobileMenu();
+                    }
+                });
 
             }
         );
