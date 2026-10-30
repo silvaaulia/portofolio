@@ -4376,7 +4376,7 @@
                     Contact
                 </a>
 
-                <a href="{{ asset('images/Silva_Aulia Nursamsiah_CV terbaru.pdf') }}" download="CV_Silva_Aulia_Nursamsiah.pdf">
+                <a href="{{ asset('images/Silva_Aulia_Nursamsiah_CV_.pdf') }}" download="CV_Silva_Aulia_Nursamsiah.pdf">
                     Download CV
                 </a>
 
