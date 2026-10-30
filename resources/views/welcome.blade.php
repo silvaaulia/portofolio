@@ -4303,7 +4303,7 @@
                 transition: none;
             }
         }
-```css
+
 /* Navbar default */
 #navbar {
     position: fixed;
@@ -4337,8 +4337,7 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 */
-```
-```css
+
 /* Scroll Progress Bar */
 #scrollProgress {
     position: fixed;
@@ -4360,62 +4359,53 @@
     color: #16a34a;
 }
 
-/* Back to Top */
+/* Back to Top Button */
 #backToTop {
     position: fixed;
-    right: 24px;
-    bottom: 24px;
-    width: 46px;
-    height: 46px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    right: 25px;
+    bottom: 25px;
+    z-index: 99999;
+
+    width: 48px;
+    height: 48px;
+    border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    color: #166534;
-    font-size: 24px;
+
+    background: #198754;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
-    z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(12px);
-    transition: 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                background 0.3s ease;
 }
 
-#backToTop.visible {
+#backToTop.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #backToTop:hover {
-    background: #16a34a;
-    color: white;
-    transform: translateY(-3px);
+    background: #146c43;
+    transform: translateY(-5px);
 }
 
-/* Project Card Hover */
-.project-card {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+#backToTop:active {
+    transform: scale(0.95);
 }
 
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* Respect user motion preferences */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-```
     </style>
 </head>
 
@@ -6611,7 +6601,7 @@
          JAVASCRIPT
     ========================================================== -->
 
-    ```html
+   
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -6691,7 +6681,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-```javascript
+
 /* ================================================
    SCROLL PROGRESS BAR
 ================================================ */
@@ -6786,9 +6776,36 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach(function (section) {
     sectionObserver.observe(section);
 });
-```
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTop = document.getElementById("backToTop");
+
+    if (!backToTop) return;
+
+    // Tampilkan tombol ketika halaman di-scroll
+    function toggleBackToTop() {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    }
+
+    window.addEventListener("scroll", toggleBackToTop, {
+        passive: true
+    });
+
+    // Kembali ke bagian paling atas
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    toggleBackToTop();
+});
+
 </script>
-```
 <!-- Back to Top -->
 <button
     id="backToTop"
