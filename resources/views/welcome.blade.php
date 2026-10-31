@@ -4006,10 +4006,6 @@
     margin-bottom: 0;
 }
 
-.education-description {
-    transform: translateY(-60px);
-}
-
 .education-description p {
     color: #77716a;
     margin-top: -0px;
@@ -5251,6 +5247,120 @@ body {
     box-shadow: 0 10px 28px rgba(217, 79, 140, .3);
 }
 
+.pmb-carousel {
+    isolation: isolate;
+    padding: 18px 54px 42px;
+    background: linear-gradient(145deg, #fff5f9, #f8e9f0);
+}
+
+.pmb-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pmb-carousel-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.pmb-carousel-slide.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pmb-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 22px;
+    box-shadow: none !important;
+}
+
+.project:hover .pmb-carousel-slide img {
+    transform: none;
+}
+
+.pmb-carousel-arrow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(217, 79, 140, .2);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .92);
+    color: #a63e6d;
+    font: inherit;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background .2s ease, box-shadow .2s ease;
+}
+
+.pmb-carousel-arrow:hover,
+.pmb-carousel-arrow:focus-visible {
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(113, 48, 77, .14);
+}
+
+.pmb-carousel-prev {
+    left: 10px;
+}
+
+.pmb-carousel-next {
+    right: 10px;
+}
+
+.pmb-carousel-dots {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 12px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pmb-carousel-dots button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(166, 62, 109, .28);
+    cursor: pointer;
+    transition: width .2s ease, background .2s ease;
+}
+
+.pmb-carousel-dots button.is-active {
+    width: 22px;
+    border-radius: 99px;
+    background: #c64d81;
+}
+
+@media (max-width: 700px) {
+    .pmb-carousel {
+        padding: 14px 46px 38px;
+    }
+
+    .pmb-carousel-arrow {
+        width: 34px;
+        height: 34px;
+    }
+}
+
     </style>
 </head>
 
@@ -6085,11 +6195,45 @@ body {
 
                 <article class="project reveal">
 
-                    <div class="project-image project-orange">
-                        <img
-                            src="{{ asset('images/zona-ft-pmb.jpg') }}"
-                            alt="Desain Instagram PMB Telah Dibuka Fakultas Teknik UNSUR"
-                        >
+                    <div
+                        class="project-image project-orange pmb-carousel"
+                        id="pmbCarousel"
+                        role="region"
+                        aria-label="Galeri desain promosi PMB Fakultas Teknik UNSUR"
+                        aria-roledescription="carousel"
+                    >
+                        <div class="pmb-carousel-track">
+                            <div class="pmb-carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="1 dari 5" aria-hidden="false">
+                                <img src="{{ asset('images/zona-ft-pmb-01.webp') }}" alt="Promosi PMB UNSUR dengan ajakan untuk mendaftar sekarang">
+                            </div>
+                            <div class="pmb-carousel-slide" role="group" aria-roledescription="slide" aria-label="2 dari 5" aria-hidden="true">
+                                <img src="{{ asset('images/zona-ft-pmb-02.webp') }}" alt="Desain pengumuman PMB telah dibuka untuk Fakultas Teknik Universitas Suryakancana">
+                            </div>
+                            <div class="pmb-carousel-slide" role="group" aria-roledescription="slide" aria-label="3 dari 5" aria-hidden="true">
+                                <img src="{{ asset('images/zona-ft-pmb-03.webp') }}" alt="Desain sambutan mahasiswa baru Fakultas Teknik tahun 2025">
+                            </div>
+                            <div class="pmb-carousel-slide" role="group" aria-roledescription="slide" aria-label="4 dari 5" aria-hidden="true">
+                                <img src="{{ asset('images/zona-ft-pmb-04.webp') }}" alt="Informasi penerimaan mahasiswa baru tahun ajaran 2026/2027">
+                            </div>
+                            <div class="pmb-carousel-slide" role="group" aria-roledescription="slide" aria-label="5 dari 5" aria-hidden="true">
+                                <img src="{{ asset('images/zona-ft-pmb-05.webp') }}" alt="Jadwal pendaftaran mahasiswa baru tahun ajaran 2026/2027">
+                            </div>
+                        </div>
+
+                        <button class="pmb-carousel-arrow pmb-carousel-prev" type="button" aria-label="Foto sebelumnya" aria-controls="pmbCarousel">
+                            <span aria-hidden="true">‹</span>
+                        </button>
+                        <button class="pmb-carousel-arrow pmb-carousel-next" type="button" aria-label="Foto berikutnya" aria-controls="pmbCarousel">
+                            <span aria-hidden="true">›</span>
+                        </button>
+
+                        <div class="pmb-carousel-dots" role="group" aria-label="Pilih foto">
+                            <button class="is-active" type="button" aria-label="Tampilkan foto 1" aria-current="true"></button>
+                            <button type="button" aria-label="Tampilkan foto 2"></button>
+                            <button type="button" aria-label="Tampilkan foto 3"></button>
+                            <button type="button" aria-label="Tampilkan foto 4"></button>
+                            <button type="button" aria-label="Tampilkan foto 5"></button>
+                        </div>
                     </div>
 
                     <div class="project-content">
@@ -7400,8 +7544,67 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(function (section) {
-    sectionObserver.observe(section);
+sectionObserver.observe(section);
 });
+
+const pmbCarousel = document.getElementById("pmbCarousel");
+
+if (pmbCarousel) {
+    const slides = Array.from(
+        pmbCarousel.querySelectorAll(".pmb-carousel-slide")
+    );
+    const dots = Array.from(
+        pmbCarousel.querySelectorAll(".pmb-carousel-dots button")
+    );
+    const previousButton = pmbCarousel.querySelector(".pmb-carousel-prev");
+    const nextButton = pmbCarousel.querySelector(".pmb-carousel-next");
+    let currentSlide = 0;
+
+    function showPmbSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides.forEach(function (slide, slideIndex) {
+            const isActive = slideIndex === currentSlide;
+            slide.classList.toggle("is-active", isActive);
+            slide.setAttribute("aria-hidden", String(!isActive));
+        });
+
+        dots.forEach(function (dot, dotIndex) {
+            const isActive = dotIndex === currentSlide;
+            dot.classList.toggle("is-active", isActive);
+
+            if (isActive) {
+                dot.setAttribute("aria-current", "true");
+            } else {
+                dot.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    previousButton.addEventListener("click", function () {
+        showPmbSlide(currentSlide - 1);
+    });
+
+    nextButton.addEventListener("click", function () {
+        showPmbSlide(currentSlide + 1);
+    });
+
+    dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+            showPmbSlide(index);
+        });
+    });
+
+    pmbCarousel.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            showPmbSlide(currentSlide - 1);
+        } else if (event.key === "ArrowRight") {
+            event.preventDefault();
+            showPmbSlide(currentSlide + 1);
+        }
+    });
+}
 document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.getElementById("backToTop");
 
