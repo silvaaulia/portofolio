@@ -5590,62 +5590,122 @@ body {
 
                         </p>
 
+                        <div class="about-info">
 
-                       
-<div class="about-info">
+                            <div class="info-item">
+                                <span>
+                                    EDUCATION
+                                </span>
 
-    <div class="info-item">
-        <span>
-            EDUCATION
-        </span>
+                                <strong>
+                                    Teknik Informatika
+                                </strong>
 
-        <strong>
-            Teknik Informatika
-        </strong>
+                                <small>
+                                    Universitas Suryakancana · 2022 — 2026
+                                </small>
 
-        <small>
-            Universitas Suryakancana · 2022 — 2026
-        </small>
+                                <small>
+                                    IPK: 3.69 / 4.00
+                                </small>
+                            </div>
 
-        <small>
-            IPK: 3.69 / 4.00
-        </small>
-    </div>
+                            <div class="info-item">
+                                <span>
+                                    FOCUS
+                                </span>
 
-    <div class="info-item">
-        <span>
-            FOCUS
-        </span>
+                                <strong>
+                                    Design & Technology
+                                </strong>
 
-        <strong>
-            Design & Technology
-        </strong>
+                                <small>
+                                    UI/UX · Frontend · Backend · Administrasi
+                                </small>
+                            </div>
 
-        <small>
-            UI/UX · Frontend · Backend ·Administrasi  
-        </small>
-    </div>
+                            <div class="info-item">
+                                <span>
+                                    LANGUAGES
+                                </span>
 
-    <div class="info-item">
-        <span>
-            LANGUAGES
-        </span>
+                                <strong>
+                                    Bahasa Indonesia · Ahli
+                                </strong>
 
-        <strong>
-            Bahasa Indonesia · Ahli 
-        </strong>
+                                <strong>
+                                    Bahasa Inggris · Menengah
+                                </strong>
 
-        <strong>
-            Bahasa Inggris · Menengah
-        </strong>
+                                <strong>
+                                    Bahasa Jepang · Dasar
+                                </strong>
+                            </div>
 
-        <strong>
-            Bahasa Jepang · Dasar
-        </strong>
-    </div>
+                        </div>
 
-</div>
 
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section class="section" id="education">
+
+            <div class="container">
+
+                <div class="section-label">
+                    <span>02</span>
+                    EDUCATION
+                </div>
+
+
+                <div class="education-card reveal">
+
+                    <div>
+
+                        <p class="education-year">
+                            SEP 2022 — JUN 2026
+                        </p>
+
+                        <h2>
+                            Universitas
+                            Suryakancana
+                        </h2>
+
+                        <p class="education-major">
+                            S1 Teknik Informatika
+                        </p>
+
+                        <div class="edu-badge">
+                            IPK 3,69 / 4,00
+                            <span>· Fresh Graduate</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="education-description">
+
+                        <p>
+
+                            Mempelajari pengembangan perangkat lunak,
+                            pemrograman web, basis data, rekayasa
+                            perangkat lunak, serta perancangan antarmuka
+                            dan pengalaman pengguna. Aktif mengerjakan
+                            berbagai proyek website dan aplikasi sebagai
+                            penerapan kemampuan teknis, analisis kebutuhan,
+                            UI/UX, database, dan pengembangan sistem.
+
+                        </p>
 
                     </div>
 
@@ -5665,7 +5725,7 @@ body {
             <div class="container">
 
                 <div class="section-label">
-                    <span>02</span>
+                    <span>03</span>
                     SELECTED WORKS
                 </div>
 
@@ -6105,7 +6165,7 @@ body {
             <div class="container">
 
                 <div class="section-label">
-                    <span>03</span>
+                    <span>04</span>
                     WORK EXPERIENCE
                 </div>
 
@@ -6271,6 +6331,268 @@ body {
 
 
         <!-- =====================================================
+             ORGANIZATION
+        ====================================================== -->
+
+        <section class="section" id="organization">
+
+            <div class="container">
+
+                <div class="section-label">
+                    <span>05</span>
+                    ORGANIZATION
+                </div>
+
+
+                <div class="works-header reveal">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LEADERSHIP & CONTRIBUTIONS
+                        </p>
+
+                        <h2>
+                            Beyond the
+                            <em>code.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Pengalaman berorganisasi dalam divisions
+                        keuangan serta sekretariat yang membentuk
+                        kemampuan administrasi, dokumentasi,
+                        dan koordinasi tim.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline reveal">
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            APR 2025 — JUN 2025
+                        </span>
+
+                        <h3>
+                            Bendahara
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>KKN-T</em> — Bendahara Tim KKN-T
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mencatat dan merekapitulasi pemasukan serta
+                                pengeluaran keuangan secara harian selama kegiatan
+                                KKN-T, termasuk kebutuhan konsumsi dan pelaksanaan
+                                program kerja (proker).
+                            </li>
+
+                            <li>
+                                Mengelola pencatatan anggaran untuk kebutuhan
+                                operasional, konsumsi anggota, serta pengadaan
+                                perlengkapan dan pelaksanaan program kerja.
+                            </li>
+
+                            <li>
+                                Menyusun laporan keuangan berdasarkan transaksi
+                                harian untuk memantau penggunaan dana dan memastikan
+                                kesesuaian antara anggaran dengan realisasi
+                                pengeluaran.
+                            </li>
+
+                            <li>
+                                Berkoordinasi dengan anggota tim terkait
+                                perencanaan anggaran, pemenuhan kebutuhan kegiatan,
+                                dan pertanggungjawaban penggunaan dana.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            JUN 2024
+                        </span>
+
+                        <h3>
+                            Sekretaris Kegiatan Studi Lapangan Cybersecurity
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>Universitas Suryakancana</em> — Studi Lapangan Mata Kuliah Cybersecurity
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola administrasi dan dokumentasi kegiatan studi lapangan mata kuliah Cybersecurity ke Bali dan Yogyakarta.
+                            </li>
+
+                            <li>
+                                Mencatat informasi kegiatan serta membantu koordinasi antara peserta dan dosen.
+                            </li>
+
+                            <li>
+                                Mendukung kelancaran kegiatan melalui pengelolaan informasi dan kebutuhan administrasi.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            SEP 2023
+                        </span>
+
+                        <h3>
+                            Kesekretariatan
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>SOFAK Teknik UNSUR</em>
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola dan mengolah data administrasi sekitar 200 mahasiswa untuk mendukung proses pendataan dan pencatatan informasi.
+                            </li>
+
+                            <li>
+                                Mengelola administrasi keuangan dengan nilai sekitar Rp50.000.000, termasuk pencatatan transaksi, rekapitulasi data keuangan, dan penyusunan laporan administrasi.
+                            </li>
+
+                            <li>
+                                Memeriksa kelengkapan dan kesesuaian data administrasi serta keuangan untuk menjaga ketertiban dan akurasi pencatatan.
+                            </li>
+
+                            <li>
+                                Membuat dan mengelola saluran informasi untuk menyampaikan pengumuman, pembaruan informasi, serta kebutuhan administrasi kepada mahasiswa.
+                            </li>
+
+                            <li>
+                                Berkoordinasi dengan panitia terkait pengumpulan data mahasiswa, pembaruan informasi, dan kebutuhan administrasi kegiatan.
+                            </li>
+
+                            <li>
+                                Menyusun dan mengarsipkan dokumen administrasi serta rekapitulasi data untuk memudahkan penelusuran dan pelaporan.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            SEP 2023 — MAR 2024
+                        </span>
+
+                        <h3>
+                            Sekretaris
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>SINERGI</em> — Sekretariat Organisasi
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola dan memperbarui data
+                                administrasi serta dokumentasi kegiatan
+                                organisasi.
+                            </li>
+
+                            <li>
+                                Menyusun dan mengarsipkan dokumen secara
+                                terstruktur untuk mendukung kebutuhan
+                                administrasi.
+                            </li>
+
+                            <li>
+                                Mencatat informasi kegiatan dan
+                                mengoordinasikan kebutuhan administrasi
+                                antaranggota.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tl-item">
+
+                        <span class="tl-dot"></span>
+
+                        <span class="tl-date">
+                            JAN 2021 — JAN 2022
+                        </span>
+
+                        <h3>
+                            Sekretaris
+                        </h3>
+
+                        <p class="tl-role">
+                            <em>KARIPRAK</em> — Sekretariat Organisasi
+                        </p>
+
+                        <ul class="tl-points">
+
+                            <li>
+                                Mengelola data administrasi, agenda
+                                kegiatan, dan dokumen organisasi
+                                secara terstruktur.
+                            </li>
+
+                            <li>
+                                Menyusun, mencatat, dan mengarsipkan
+                                dokumen untuk memudahkan pencarian
+                                informasi.
+                            </li>
+
+                            <li>
+                                Mengelola informasi kegiatan dan membantu
+                                memastikan kebutuhan administrasi
+                                terdokumentasi dengan baik.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
              PROCESS
         ====================================================== -->
 
@@ -6279,7 +6601,7 @@ body {
             <div class="container">
 
                 <div class="section-label">
-                    <span>04</span>
+                    <span>06</span>
                     MY PROCESS
                 </div>
 
@@ -6417,7 +6739,7 @@ body {
             <div class="container">
 
                 <div class="section-label">
-                    <span>05</span>
+                    <span>07</span>
                     SKILLS & TOOLS
                 </div>
 
@@ -6729,238 +7051,6 @@ body {
                             <span>Adobe Illustrator</span>
 
                         </div> -->
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             EDUCATION
-        ====================================================== -->
-
-        <section class="section">
-
-            <div class="container">
-
-                <div class="section-label">
-                    <span>06</span>
-                    EDUCATION
-                </div>
-
-
-                <div class="education-card reveal">
-
-                    <div>
-
-                        <p class="education-year">
-                            SEP 2022 — JUN 2026
-                        </p>
-
-                        <h2>
-                            Universitas
-                            Suryakancana
-                        </h2>
-
-                        <p class="education-major">
-                            S1 Teknik Informatika
-                        </p>
-
-                        <div class="edu-badge">
-                            IPK 3,69 / 4,00
-                            <span>· Fresh Graduate</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="education-description">
-
-                        <p>
-
-                            Mempelajari pengembangan perangkat lunak,
-                            pemrograman web, basis data, rekayasa
-                            perangkat lunak, serta perancangan antarmuka
-                            dan pengalaman pengguna. Aktif mengerjakan
-                            berbagai proyek website dan aplikasi sebagai
-                            penerapan kemampuan teknis, analisis kebutuhan,
-                            UI/UX, database, dan pengembangan sistem.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             ORGANIZATION
-        ====================================================== -->
-
-        <section class="section" id="organization">
-
-            <div class="container">
-
-                <div class="section-label">
-                    <span>07</span>
-                    ORGANIZATION
-                </div>
-
-
-                <div class="works-header reveal">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            LEADERSHIP & CONTRIBUTIONS
-                        </p>
-
-                        <h2>
-                            Beyond the
-                            <em>code.</em>
-                        </h2>
-
-                    </div>
-
-
-                    <p>
-
-                        Pengalaman berorganisasi dalam divisions
-                        keuangan serta sekretariat yang membentuk
-                        kemampuan administrasi, dokumentasi,
-                        dan koordinasi tim.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline reveal">
-
-                    <div class="tl-item">
-
-                        <span class="tl-dot"></span>
-
-                        <span class="tl-date">
-                            APR 2025 — JUN 2025
-                        </span>
-
-                        <h3>
-                            Bendahara
-                        </h3>
-
-                        <p class="tl-role">
-                            <em>KKN-T</em> — Bendahara Tim KKN-T
-                        </p>
-
-                        <ul class="tl-points">
-
-                            <li>
-                                Mengelola dan mencatat pemasukan serta
-                                pengeluaran selama kegiatan KKN-T.
-                            </li>
-
-                            <li>
-                                Menyusun laporan keuangan dan memastikan
-                                penggunaan dana sesuai dengan kebutuhan
-                                kegiatan.
-                            </li>
-
-                            <li>
-                                Berkoordinasi dengan anggota tim terkait
-                                kebutuhan dan pertanggungjawaban keuangan.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <div class="tl-item">
-
-                        <span class="tl-dot"></span>
-
-                        <span class="tl-date">
-                            SEP 2023 — MAR 2024
-                        </span>
-
-                        <h3>
-                            Sekretaris
-                        </h3>
-
-                        <p class="tl-role">
-                            <em>SINERGI</em> — Sekretariat Organisasi
-                        </p>
-
-                        <ul class="tl-points">
-
-                            <li>
-                                Mengelola dan memperbarui data
-                                administrasi serta dokumentasi kegiatan
-                                organisasi.
-                            </li>
-
-                            <li>
-                                Menyusun dan mengarsipkan dokumen secara
-                                terstruktur untuk mendukung kebutuhan
-                                administrasi.
-                            </li>
-
-                            <li>
-                                Mencatat informasi kegiatan dan
-                                mengoordinasikan kebutuhan administrasi
-                                antaranggota.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <div class="tl-item">
-
-                        <span class="tl-dot"></span>
-
-                        <span class="tl-date">
-                            JAN 2021 — JAN 2022
-                        </span>
-
-                        <h3>
-                            Sekretaris
-                        </h3>
-
-                        <p class="tl-role">
-                            <em>KARIPRAK</em> — Sekretariat Organisasi
-                        </p>
-
-                        <ul class="tl-points">
-
-                            <li>
-                                Mengelola data administrasi, agenda
-                                kegiatan, dan dokumen organisasi
-                                secara terstruktur.
-                            </li>
-
-                            <li>
-                                Menyusun, mencatat, dan mengarsipkan
-                                dokumen untuk memudahkan pencarian
-                                informasi.
-                            </li>
-
-                            <li>
-                                Mengelola informasi kegiatan dan membantu
-                                memastikan kebutuhan administrasi
-                                terdokumentasi dengan baik.
-                            </li>
-
-                        </ul>
 
                     </div>
 
