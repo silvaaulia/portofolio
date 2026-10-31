@@ -5700,62 +5700,6 @@ body {
 
                         </p>
 
-                        <div class="about-info">
-
-                            <div class="info-item">
-                                <span>
-                                    EDUCATION
-                                </span>
-
-                                <strong>
-                                    Teknik Informatika
-                                </strong>
-
-                                <small>
-                                    Universitas Suryakancana · 2022 — 2026
-                                </small>
-
-                                <small>
-                                    IPK: 3.69 / 4.00
-                                </small>
-                            </div>
-
-                            <div class="info-item">
-                                <span>
-                                    FOCUS
-                                </span>
-
-                                <strong>
-                                    Design & Technology
-                                </strong>
-
-                                <small>
-                                    UI/UX · Frontend · Backend · Administrasi
-                                </small>
-                            </div>
-
-                            <div class="info-item">
-                                <span>
-                                    LANGUAGES
-                                </span>
-
-                                <strong>
-                                    Bahasa Indonesia · Ahli
-                                </strong>
-
-                                <strong>
-                                    Bahasa Inggris · Menengah
-                                </strong>
-
-                                <strong>
-                                    Bahasa Jepang · Dasar
-                                </strong>
-                            </div>
-
-                        </div>
-
-
-                    </div>
 
                 </div>
 
