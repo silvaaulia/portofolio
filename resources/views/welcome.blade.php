@@ -19,6 +19,8 @@
         rel="stylesheet"
     >
 
+    @vite('resources/js/portfolio-pdf.js')
+
     <style>
 
         /* =========================================================
@@ -2758,6 +2760,12 @@
 
         .skill-tag {
 
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
             padding: 7px 12px;
 
             border: 1px solid var(--border);
@@ -2771,6 +2779,32 @@
             transition:
                 color .3s ease,
                 border-color .3s ease;
+        }
+
+        .skill-app-logo {
+
+            width: 16px !important;
+
+            height: 16px !important;
+
+            max-width: 16px !important;
+
+            max-height: 16px !important;
+
+            flex-shrink: 0;
+
+            object-fit: contain;
+        }
+
+        #pdfExportRoot .skill-app-logo {
+
+            width: 16px !important;
+
+            height: 16px !important;
+
+            max-width: 16px !important;
+
+            max-height: 16px !important;
         }
 
         .skill-tag:hover {
@@ -5361,6 +5395,202 @@ body {
     }
 }
 
+.certificate-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 64px);
+    padding: clamp(20px, 4vw, 48px);
+    border: 1px solid rgba(38, 35, 40, .07);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .86);
+    box-shadow: 0 18px 48px rgba(58, 48, 37, .07);
+}
+
+.certificate-preview {
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(38, 35, 40, .08);
+    border-radius: 16px;
+    background: #f7f7f8;
+}
+
+.certificate-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.certificate-information .eyebrow {
+    margin-bottom: 12px;
+    color: #a63e6d;
+}
+
+.certificate-information h3 {
+    margin-bottom: 14px;
+    color: #292722;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 600;
+    letter-spacing: -.05em;
+    line-height: 1.15;
+}
+
+.certificate-information > p:not(.eyebrow) {
+    margin-bottom: 24px;
+    color: #77716a;
+    line-height: 1.8;
+}
+
+.certificate-details {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.certificate-details div {
+    display: grid;
+    gap: 4px;
+}
+
+.certificate-details span {
+    color: #9a8066;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.certificate-details strong {
+    color: #45413b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.certificate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a63e6d;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.certificate-link:hover {
+    color: #c64d81;
+}
+
+@page {
+    size: 400mm 280mm;
+    margin: 10mm;
+}
+
+@media print {
+    html,
+    body {
+        width: 1440px !important;
+        min-width: 1440px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        scroll-behavior: auto !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    #navbar {
+        display: none !important;
+    }
+
+    #navMenu {
+        display: flex !important;
+    }
+
+    #mobileToggle,
+    #scrollProgress,
+    #backToTop,
+    #particleCanvas,
+    .cyber-grid,
+    .floating-shapes,
+    .cursor-glow,
+    .scanlines,
+    .pdf-download-button,
+    .pmb-carousel-arrow,
+    .pmb-carousel-dots {
+        display: none !important;
+    }
+
+    .reveal,
+    .reveal.active {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+    #home {
+        min-height: 0 !important;
+        padding: 24px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    #home .hero-content {
+        zoom: .82;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    #about,
+    #education,
+    #works,
+    #experience,
+    #organization,
+    #process,
+    #skills,
+    #certificates,
+    #contact {
+        break-before: page !important;
+        page-break-before: always !important;
+    }
+
+    .works-header,
+    .project,
+    .education-card,
+    .tl-item,
+    .process-card,
+    .skill-group,
+    .certificate-card,
+    footer {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .pmb-carousel-slide:not(.is-active) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .certificate-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 18px;
+        border-radius: 19px;
+    }
+}
+
     </style>
 </head>
 
@@ -5429,6 +5659,10 @@ body {
 
                 <a href="#skills">
                     Skills
+                </a>
+
+                <a href="#certificates">
+                    Certificates
                 </a>
 
                 <a href="#contact">
@@ -5548,7 +5782,10 @@ body {
                         LinkedIn
                     </a>
 
-            
+                    <a href="https://www.instagram.com/silva1_6?vrfl=MWxueGJvcnFoa3dvcA==" target="_blank" rel="noopener noreferrer">
+                        <span class="m-icon">◎</span>
+                        Instagram
+                    </a>
 
                 </div>
 
@@ -5572,6 +5809,16 @@ body {
                     >
                         Contact Me
                     </a>
+
+                    <!-- <button
+                        class="button button-outline pdf-download-button"
+                        id="downloadPortfolioPdf"
+                        type="button"
+                        aria-label="Unduh portofolio sebagai PDF"
+                    >
+                        Unduh Portofolio PDF
+                        <span aria-hidden="true">↓</span>
+                    </button> -->
 
                 </div>
 
@@ -6237,6 +6484,72 @@ body {
                 </article>
 
 
+                <!-- PROJECT 06 -->
+
+                <article class="project reverse reveal">
+
+                    <div class="project-image project-orange">
+
+                        <img
+                            src="{{ asset('images/warehouse-ui-flow.jpg') }}"
+                            alt="Alur layar aplikasi mobile operasional gudang untuk proses picking, barcode, dan verifikasi barang"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            06 / 06
+                        </span>
+
+                        <span class="project-category">
+                            MOBILE APP · UI/UX · USER FLOW
+                        </span>
+
+                        <h3>
+                            Aplikasi Operasional Gudang
+                        </h3>
+
+                        <p>
+                            Rancangan alur antarmuka mobile untuk mendukung
+                            operasional gudang, mulai dari masuk sebagai
+                            operator dan melihat ringkasan batch, hingga
+                            picking barang, pemindaian barcode, serta
+                            verifikasi hasil. Alur juga menampilkan kondisi
+                            berhasil dan penanganan verifikasi yang gagal.
+                        </p>
+
+                        <div class="project-details">
+
+                            <div>
+                                <span>
+                                    PERAN
+                                </span>
+
+                                <strong>
+                                    UI/UX Design
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    CAKUPAN
+                                </span>
+
+                                <strong>
+                                    User Flow · Mobile App
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
                 
 
             </div>
@@ -6877,12 +7190,30 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">PHP</span>
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">Java</span>
-                                    <span class="skill-tag">C</span>
-                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/javascript.svg') }}" alt="" aria-hidden="true">
+                                        JavaScript
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/php.svg') }}" alt="" aria-hidden="true">
+                                        PHP
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/python.svg') }}" alt="" aria-hidden="true">
+                                        Python
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/java.svg') }}" alt="" aria-hidden="true">
+                                        Java
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/c.svg') }}" alt="" aria-hidden="true">
+                                        C
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/cpp.svg') }}" alt="" aria-hidden="true">
+                                        C++
+                                    </span>
 
                                 </div>
 
@@ -6903,7 +7234,10 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/figma.svg') }}" alt="" aria-hidden="true">
+                                        Figma
+                                    </span>
                                     <span class="skill-tag">User Flow</span>
                                     <span class="skill-tag">Flowmap</span>
                                     <span class="skill-tag">Wireframing</span>
@@ -6958,7 +7292,10 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">Laravel</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/laravel.svg') }}" alt="" aria-hidden="true">
+                                        Laravel
+                                    </span>
                                     <span class="skill-tag">Routing</span>
                                     <span class="skill-tag">Controller</span>
                                     <span class="skill-tag">CRUD Operations</span>
@@ -6983,7 +7320,10 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/mysql.svg') }}" alt="" aria-hidden="true">
+                                        MySQL
+                                    </span>
                                     <span class="skill-tag">SQL</span>
                                     <span class="skill-tag">Database Design</span>
                                     <span class="skill-tag">Relational Database</span>
@@ -7007,8 +7347,14 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">Microsoft Excel</span>
-                                    <span class="skill-tag">Microsoft Word</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/excel.svg') }}" alt="" aria-hidden="true">
+                                        Microsoft Excel
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/word.svg') }}" alt="" aria-hidden="true">
+                                        Microsoft Word
+                                    </span>
                                     <span class="skill-tag">Data Entry</span>
                                     <span class="skill-tag">Data Processing</span>
                                     <span class="skill-tag">Data Management</span>
@@ -7033,10 +7379,22 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">Visual Studio Code</span>
-                                    <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">GitHub</span>
-                                    <span class="skill-tag">XAMPP</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/vscode.svg') }}" alt="" aria-hidden="true">
+                                        Visual Studio Code
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/git.svg') }}" alt="" aria-hidden="true">
+                                        Git
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/github.svg') }}" alt="" aria-hidden="true">
+                                        GitHub
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/xampp.svg') }}" alt="" aria-hidden="true">
+                                        XAMPP
+                                    </span>
                                     <span class="skill-tag">Browser Developer Tools</span>
 
                                 </div>
@@ -7058,9 +7416,18 @@ body {
 
                                 <div class="skill-tags">
 
-                                    <span class="skill-tag">Canva</span>
-                                    <span class="skill-tag">CapCut</span>
-                                    <span class="skill-tag">Adobe Illustrator</span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/canva.svg') }}" alt="" aria-hidden="true">
+                                        Canva
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/capcut.svg') }}" alt="" aria-hidden="true">
+                                        CapCut
+                                    </span>
+                                    <span class="skill-tag">
+                                        <img class="skill-app-logo" src="{{ asset('images/skill-logos/illustrator.svg') }}" alt="" aria-hidden="true">
+                                        Adobe Illustrator
+                                    </span>
 
                                 </div>
 
@@ -7150,6 +7517,252 @@ body {
 
 
         <!-- =====================================================
+             CERTIFICATES
+        ====================================================== -->
+
+        <section class="section" id="certificates">
+
+            <div class="container">
+
+                <div class="section-label">
+                    <span>08</span>
+                    CERTIFICATES
+                </div>
+
+
+                <div class="works-header reveal">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            CONTINUOUS LEARNING
+                        </p>
+
+                        <h2>
+                            Learning in
+                            <em>practice.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Pelatihan dan sertifikat yang mendukung
+                        pengembangan keterampilan profesional.
+                    </p>
+
+                </div>
+
+
+                <article class="certificate-card reveal">
+
+                    <a
+                        class="certificate-preview"
+                        href="{{ asset('images/certificates/excel-for-business-simplilearn.webp') }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Buka gambar sertifikat Excel for Business"
+                    >
+                        <img
+                            src="{{ asset('images/certificates/excel-for-business-simplilearn.webp') }}"
+                            alt="Certificate of Completion untuk Excel for Business Course With Certificate dari Simplilearn SkillUp"
+                            loading="lazy"
+                        >
+                    </a>
+
+
+                    <div class="certificate-information">
+
+                        <p class="eyebrow">
+                            CERTIFICATE OF COMPLETION
+                        </p>
+
+                        <h3>
+                            Excel for Business
+                        </h3>
+
+                        <p>
+                            Menyelesaikan kursus online Excel for Business
+                            dari Simplilearn SkillUp.
+                        </p>
+
+                        <div class="certificate-details">
+
+                            <div>
+                                <span>PENERBIT</span>
+                                <strong>Simplilearn SkillUp</strong>
+                            </div>
+
+                            <div>
+                                <span>TANGGAL</span>
+                                <strong>29 Oktober 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>KODE SERTIFIKAT</span>
+                                <strong>10965327</strong>
+                            </div>
+
+                        </div>
+
+                        <a
+                            class="certificate-link"
+                            href="{{ asset('images/certificates/excel-for-business-simplilearn.webp') }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Lihat Sertifikat
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="certificate-card reveal">
+
+                    <a
+                        class="certificate-preview"
+                        href="{{ asset('images/certificates/toefl-prediction-test-2026.pdf') }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Buka sertifikat prediction TOEFL dalam format PDF"
+                    >
+                        <img
+                            src="{{ asset('images/certificates/toefl-prediction-test-2026.webp') }}"
+                            alt="Certificate of Achievement prediction TOEFL atas nama Silva Aulia Nursamsiah dengan skor total 553"
+                            loading="lazy"
+                        >
+                    </a>
+
+
+                    <div class="certificate-information">
+
+                        <p class="eyebrow">
+                            CERTIFICATE OF ACHIEVEMENT
+                        </p>
+
+                        <h3>
+                            TOEFL Prediction Test
+                        </h3>
+
+                        <p>
+                            Mengikuti prediction test TOEFL yang diselenggarakan
+                            Kingdom English Course Malang bekerja sama dengan
+                            Kind English Course Pare.
+                        </p>
+
+                        <div class="certificate-details">
+
+                            <div>
+                                <span>SKOR TOTAL</span>
+                                <strong>553</strong>
+                            </div>
+
+                            <div>
+                                <span>TANGGAL TES</span>
+                                <strong>12 Juli 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>BERLAKU HINGGA</span>
+                                <strong>12 Juli 2028</strong>
+                            </div>
+
+                            <div>
+                                <span>NOMOR SERTIFIKAT</span>
+                                <strong>15659/KINGDOM/TOEFL/2026</strong>
+                            </div>
+
+                        </div>
+
+                        <a
+                            class="certificate-link"
+                            href="{{ asset('images/certificates/toefl-prediction-test-2026.pdf') }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Lihat PDF Sertifikat
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="certificate-card reveal">
+
+                    <a
+                        class="certificate-preview"
+                        href="{{ asset('images/certificates/compfest-17-ai-innovation-challenge-speaker-2025.pdf') }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Buka sertifikat pembicara COMPFEST 17 dalam format PDF"
+                    >
+                        <img
+                            src="{{ asset('images/certificates/compfest-17-ai-innovation-challenge-speaker-2025.webp') }}"
+                            alt="Sertifikat COMPFEST Competition yang diberikan kepada Silva Aulia Nursamsiah sebagai Speaker of AI Innovation Challenge Talks di COMPFEST 17 pada 26 Mei 2025"
+                            loading="lazy"
+                        >
+                    </a>
+
+
+                    <div class="certificate-information">
+
+                        <p class="eyebrow">
+                            SPEAKER CERTIFICATE
+                        </p>
+
+                        <h3>
+                            AI Innovation Challenge Talks
+                        </h3>
+
+                        <p>
+                            Menjadi pembicara dalam sesi AI Innovation
+                            Challenge Talks di COMPFEST 17.
+                        </p>
+
+                        <div class="certificate-details">
+
+                            <div>
+                                <span>PERAN</span>
+                                <strong>Speaker</strong>
+                            </div>
+
+                            <div>
+                                <span>ACARA</span>
+                                <strong>COMPFEST 17</strong>
+                            </div>
+
+                            <div>
+                                <span>TANGGAL</span>
+                                <strong>26 Mei 2025</strong>
+                            </div>
+
+                        </div>
+
+                        <a
+                            class="certificate-link"
+                            href="{{ asset('images/certificates/compfest-17-ai-innovation-challenge-speaker-2025.pdf') }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Lihat PDF Sertifikat
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
              CONTACT
         ====================================================== -->
 
@@ -7202,6 +7815,11 @@ body {
                 <a href="https://linkedin.com/in/silva-aulia-nursamsiah-b9434423b" target="_blank" rel="noopener noreferrer">
                     <span class="c-icon">in</span>
                     LinkedIn
+                </a>
+
+                <a href="https://www.instagram.com/silva1_6?vrfl=MWxueGJvcnFoa3dvcA==" target="_blank" rel="noopener noreferrer">
+                    <span class="c-icon">◎</span>
+                    Instagram
                 </a>
 
                 <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
@@ -7258,6 +7876,10 @@ body {
                             in LinkedIn
                         </a>
 
+                        <a href="https://www.instagram.com/silva1_6?vrfl=MWxueGJvcnFoa3dvcA==" target="_blank" rel="noopener noreferrer">
+                            ◎ Instagram
+                        </a>
+
                         <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
                             ⚡ Live Portfolio
                         </a>
@@ -7296,6 +7918,10 @@ body {
 
                     <a href="#skills">
                         Skills
+                    </a>
+
+                    <a href="#certificates">
+                        Certificates
                     </a>
 
                     <a href="#contact">
