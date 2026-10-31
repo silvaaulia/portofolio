@@ -4755,59 +4755,61 @@
                         </p>
 
 
-                        <div class="about-info">
+                       
+<div class="about-info">
 
-                            <div class="info-item">
+    <div class="info-item">
+        <span>
+            EDUCATION
+        </span>
 
-                                <span>
-                                    EDUCATION
-                                </span>
+        <strong>
+            Teknik Informatika
+        </strong>
 
-                                <strong>
-                                    Teknik Informatika
-                                </strong>
+        <small>
+            Universitas Suryakancana · 2022 — 2026
+        </small>
 
-                                <small>
-                                    Universitas Suryakancana · 2022 — 2026
-                                </small>
+        <small>
+            IPK: 3.69 / 4.00
+        </small>
+    </div>
 
-                            </div>
+    <div class="info-item">
+        <span>
+            FOCUS
+        </span>
 
+        <strong>
+            Design & Technology
+        </strong>
 
-                            <div class="info-item">
+        <small>
+            UI/UX · Frontend · Backend ·Administrasi  
+        </small>
+    </div>
 
-                                <span>
-                                    FOCUS
-                                </span>
+    <div class="info-item">
+        <span>
+            LANGUAGES
+        </span>
 
-                                <strong>
-                                    Design & Technology
-                                </strong>
+        <strong>
+            Bahasa Indonesia · Ahli 
+        </strong>
 
-                                <small>
-                                    UI/UX · Frontend · Backend
-                                </small>
+        <strong>
+            Bahasa Inggris · Menengah
+        </strong>
 
-                            </div>
+        <strong>
+            Bahasa Jepang · Dasar
+        </strong>
+    </div>
 
+</div>
 
-                            <div class="info-item">
-
-                                <span>
-                                    LANGUAGES
-                                </span>
-
-                                <strong>
-                                    Ahli · Bahasa Indonesia 
-                                </strong>
-                                <strong>
-                                    Menengah · Bahasa Inggris 
-                                </strong>
-
-                            </div>
-
-
-                        </div>
 
                     </div>
 
