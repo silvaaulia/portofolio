@@ -3982,29 +3982,38 @@
             font-size: 11px;
         }
 
-        .education-card {
-            gap: 40px;
-            padding: 40px;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: none;
-        }
+ .education-card {
+    gap: 40px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: none;
+}
 
-        .education-year {
-            color: #9a8066;
-        }
+.education-year {
+    color: #9a8066;
+}
 
-        .education-card h2 {
-            color: #292722;
-            font-weight: 500;
-            letter-spacing: -.05em;
-        }
+.education-card h2 {
+    color: #292722;
+    font-weight: 500;
+    letter-spacing: -.05em;
+}
 
-        .education-major,
-        .education-description p {
-            color: #77716a;
-        }
+.education-major {
+    color: #77716a;
+    margin-bottom: 0;
+}
+
+.education-description {
+    transform: translateY(-60px);
+}
+
+.education-description p {
+    color: #77716a;
+    margin-top: -0px;
+}
 
         .contact {
             min-height: 0;
@@ -4535,7 +4544,7 @@
                 <div class="hero-subtitle">
 
                     <span>
-                        UI/UX Web/Mobile
+                        UI/UX Design Web/Mobile
                     </span>
 
                     <i>•</i>
@@ -4589,14 +4598,11 @@
                     </a>
 
                     <a href="https://linkedin.com/in/silva-aulia-nursamsiah-b9434423b" target="_blank" rel="noopener noreferrer">
-                        <span class="m-icon">in</span>
+                        <span class="m-icon"></span>
                         LinkedIn
                     </a>
 
-                    <a href="https://portofolio-silva.up.railway.app" target="_blank" rel="noopener noreferrer">
-                        <span class="m-icon"></span>
-                        portofolio-silva.up.railway.app
-                    </a>
+            
 
                 </div>
 
@@ -4901,7 +4907,7 @@
                                 </span>
 
                                 <strong>
-                                    UI/UX · Web Developer
+                                    UI/UX · Frontend · Backend
                                 </strong>
 
                             </div>
@@ -4983,7 +4989,7 @@
                                 </span>
 
                                 <strong>
-                                    UI/UX & Web Development
+                                    UI/UX · Frontend · Backend
                                 </strong>
 
                             </div>
@@ -5017,135 +5023,7 @@
                 </article>
 
 
-                <!-- PROJECT 02
-
-                <article class="project reverse reveal">
-
-                    <div class="project-image project-purple">
-
-                        <div class="phone">
-
-                            <div class="phone-screen">
-
-                                <div class="phone-title">
-                                    PartTimely
-                                </div>
-
-
-                                <div class="phone-search">
-                                    Search jobs...
-                                </div>
-
-
-                                <div class="job-card">
-
-                                    <strong>
-                                        Social Media Admin
-                                    </strong>
-
-                                    <small>
-                                        Remote · Part Time
-                                    </small>
-
-                                </div>
-
-
-                                <div class="job-card">
-
-                                    <strong>
-                                        Graphic Designer
-                                    </strong>
-
-                                    <small>
-                                        Remote · Freelance
-                                    </small>
-
-                                </div>
-
-
-                                <div class="job-card">
-
-                                    <strong>
-                                        UI/UX Designer
-                                    </strong>
-
-                                    <small>
-                                        Hybrid · Part Time
-                                    </small>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div> -->
-
-<!-- 
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            02 / 06
-                        </span>
-
-                        <span class="project-category">
-                            UI/UX DESIGN · JOB PLATFORM
-                        </span>
-
-
-                        <h3>
-                            PartTimely
-                        </h3>
-
-
-                        <p>
-
-                            Platform pencarian pekerjaan part-time yang dirancang untuk membantu pengguna menemukan peluang kerja berdasarkan kebutuhan dan kemampuan mereka. Fokus desain berada pada kemudahan pencarian, informasi pekerjaan yang jelas, dan pengalaman pengguna yang sederhana dengan foto.
-
-                        </p>
-
-
-                        <div class="project-details">
-
-                            <div>
-
-                                <span>
-                                    ROLE
-                                </span>
-
-                                <strong>
-                                    UI/UX Designer
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    TOOLS
-                                </span>
-
-                                <strong>
-                                    Figma · FigJam
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="project-link"
-                        >
-                            View Case Study
-                            <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </article> -->
+               
 
 
                 <!-- PROJECT 03 -->
@@ -5191,7 +5069,7 @@
                                 </span>
 
                                 <strong>
-                                    UI/UX Designer
+                                    UI/UX & Web Development
                                 </strong>
 
                             </div>
@@ -5273,7 +5151,7 @@
                                 </span>
 
                                 <strong>
-                                    Front-end Developer
+                                    UI/UX & Web Development
                                 </strong>
 
                             </div>
@@ -5331,7 +5209,7 @@
                         </h3>
 
                         <p>
-                            Desain informasi dan promosi penerimaan mahasiswa baru Fakultas Teknik Universitas Suryakancana. Visual menonjolkan pengumuman “PMB Telah Dibuka” dan mengarahkan calon mahasiswa ke informasi pendaftaran melalui Instagram.
+                            Desain informasi dan promosi penerimaan mahasiswa baru Fakultas Teknik Universitas Suryakancana. Visual menonjolkan pengumuman Penerimaan Mahasiswa Baru dan mengarahkan calon mahasiswa ke informasi pendaftaran melalui Instagram.
                         </p>
 
                         <div class="project-details">
@@ -5342,7 +5220,7 @@
                                 </span>
 
                                 <strong>
-                                    Desainer
+                                    Design grafis & Content Creator
                                 </strong>
                             </div>
 
@@ -5373,186 +5251,7 @@
                 </article>
 
 
-                <!-- PROJECT 06 -->
-
-                <article class="project reverse reveal">
-
-                    <div class="project-image project-dark">
-
-                        <img src="{{ asset('images/mock-market.png') }}" alt="Mini Market Management System" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,.4);">
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            06 / 06
-                        </span>
-
-                        <span class="project-category">
-                            WEB APPLICATION · POINT OF SALE
-                        </span>
-
-
-                        <h3>
-                            Mini Market Management System
-                        </h3>
-
-
-                        <p>
-
-                            Aplikasi web untuk mengelola transaksi
-                            dan pengecekan stok pada beberapa cabang.
-                            Sistem membantu pencatatan penjualan
-                            serta pemantauan ketersediaan stok
-                            secara terstruktur di setiap outlet.
-
-                        </p>
-
-
-                        <div class="project-details">
-
-                            <div>
-
-                                <span>
-                                    ROLE
-                                </span>
-
-                                <strong>
-                                    Web Developer
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    TECHNOLOGY
-                                </span>
-
-                                <strong>
-                                    Laravel · MySQL
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="project-link"
-                        >
-                            View Case Study
-                            <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 06
-
-                <article class="project reveal">
-
-                    <div class="project-image project-dark">
-
-                        <div class="portfolio-card">
-
-                            <div class="portfolio-card-title">
-                                Portofolio.
-                            </div>
-
-
-                            <div class="portfolio-line"></div>
-
-
-                            <div class="portfolio-blocks">
-
-                                <div></div>
-                                <div></div>
-                                <div></div>
-
-                            </div>
-
-                        </div>
-
-                    </div> -->
-
-
-                    <!-- <div class="project-content">
-
-                        <span class="project-number">
-                            05 / 06
-                        </span>
-
-                        <span class="project-category">
-                            PERSONAL PROJECT · WEB DESIGN
-                        </span>
-
-
-                        <h3>
-                            Silva Personal Portfolio
-                        </h3>
-
-
-                        <p>
-
-                            Personal portfolio website yang
-                            dirancang untuk menampilkan kemampuan,
-                            pengalaman belajar, project, dan
-                            eksplorasi saya di bidang UI/UX Design,
-                            Visual Design, dan Web Development.
-
-                        </p>
-
-
-                        <div class="project-details">
-
-                            <div>
-
-                                <span>
-                                    ROLE
-                                </span>
-
-                                <strong>
-                                    Designer & Developer
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    TECHNOLOGY
-                                </span>
-
-                                <strong>
-                                    Laravel · HTML · CSS · JavaScript
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="project-link"
-                        >
-                            Current Project
-                            <span>↗</span>
-                        </a>
-
-                    </div> -->
-
-                <!--
-                </article>
-                -->
+                
 
             </div>
 
@@ -5587,8 +5286,7 @@
                         </h2>
 
                     </div>
-
-
+                    
                     <p>
 
                         Pengalaman bekerja di bidang desain antarmuka,
@@ -6175,7 +5873,7 @@
                         </div>
 
 
-                        <div class="tools">
+                        <!-- <div class="tools">
 
                             <span>Figma</span>
                             <span>Laravel</span>
@@ -6192,7 +5890,7 @@
                             <span>CapCut</span>
                             <span>Adobe Illustrator</span>
 
-                        </div>
+                        </div> -->
 
                     </div>
 
